@@ -5933,7 +5933,7 @@ h3 {
   min-height: 100%;
   background-image: url("../images/dist/full-image.png");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center 0;
   background-size: cover;
   display: none;
 }
