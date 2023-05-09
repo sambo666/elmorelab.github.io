@@ -1,0 +1,70 @@
+{
+  "title": "How To Cook A Juicy Chicken Breast",
+  "content": "There’s a big difference between juicy chicken breasts and rubbery chicken breasts. Obviously, you want to avoid the latter at all costs. Follow these 4 steps and you’re gold. You want to add protein to favorites like Caesar salad or fix up a quick chicken salad or club sandwich? Try this method and savor the results.",
+  "ingredients": {
+    "title": "Ingredients",
+    "$0": "1 pound boneless chicken breasts",
+    "$1": "2 teaspoons olive oil",
+    "$2": "salt and pepper"
+  },
+	"menu": {
+		"home": "Главная",
+		"download": "Скачать",
+		"donation": "Донат",
+		"forum": "Форум",
+		"tourneys": "Турниры",
+		"account": "Личный кабинет"
+	},
+	"header": {
+		"support": "поддержка сервера",
+		"db": "База зананий",
+		"hall": "Зал славы",
+		"start": "Начать играть",
+		"online": "онлайн",
+		"offlinestore": "офлайн магазин",
+		"overallonline": "общий онлайн"
+	},
+	"news": {
+		"read": "Читать далее",
+		"readall": "Читать все новости",
+		"title1": "Убит первый антарас",
+		"subtitle1": "Первый антарас убит!",
+		"title2": "ЖАДНЫЙ ГНОМ",
+		"subtitle2": "X1 [TEON] Ивент \"Жадный гном\"",
+		"title3": "МЕМОМАНИЯ",
+		"subtitle3": "Дискорд-ивент. Мемомания 2.0"
+	},
+	"link": "ссылка",
+	"rates": "Рейты",
+	"features": "Фичи",
+	"quests": "Квесты",
+	"findoutmore": "Узнать больше",
+	"streams": {
+		"title": "Онлайн трансляции",
+		"publish": "Разместить трансляцию",
+		"more": "Смотреть еще"
+	},
+	"download": {
+		"client": "Готовый С5 клиент",
+		"install": "Инсталятор С5",
+		"automatic": "Автоматический",
+		"patches": "Полезные патчи",
+		"patch": "патчи",
+		"clientc2": "Готовый C2 клиент",
+		"installc2": "Инсталятор С2",
+		"preparedc2": "C2即用型客户端 / Готовый C2 клиент (Китайский)",
+		"updaterc2": "C2自动更新器 / Автоматический C2 Updater (Китайский)"
+	},
+	"topdate": "Топ за 10 февраля",
+	"thanks": "благодарим за поддержку проекта!",
+	"alldons": "все спонсоры",
+	"winners": "Победители турнира",
+	"alltourneys": "Все турниры",
+	"copyrights": "© это эмулятор mmorpg lineage, работающий только в ознакомительных целях.",
+	"tourneys": {
+		"title": "Турниры",
+		"subtitle": "Это место, которое хранит память о великих героях кто завоевал честь и славу на турнирах"
+	},
+	"allsponsors": "Все спонсоры Elmorelab",
+	"showmore": "Показать больше"
+}
