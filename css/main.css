@@ -3043,6 +3043,11 @@ h3 {
   }
 }
 @media (max-width: 767.98px) {
+  .-sub-pages .section-tower .tower__image {
+    display: none;
+  }
+}
+@media (max-width: 767.98px) {
   .-sub-pages .section-tower::after {
     display: none;
   }
@@ -5891,7 +5896,7 @@ h3 {
 }
 
 .images {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
