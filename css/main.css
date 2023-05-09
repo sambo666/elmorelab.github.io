@@ -5907,6 +5907,7 @@ h3 {
   right: 0;
   bottom: 0;
   z-index: 1;
+  min-height: 100%;
   background-image: url("../images/dist/full-image.png");
   background-repeat: no-repeat;
   background-position: 0 0;
