@@ -6153,6 +6153,18 @@ p.info-list__item {
   }
 }
 
+@media (max-width: 767.98px) {
+  .-donations.-sub-pages .clouds-bottom {
+    display: block;
+  }
+}
+@media (max-width: 767.98px) {
+  .-donations.-sub-pages .section-tower .tower__image {
+    display: block;
+    background-position: center bottom;
+    background-size: cover;
+  }
+}
 @media (max-width: 991.98px) {
   .-donations .hero.hero-sub {
     padding-bottom: 4rem;
@@ -6166,6 +6178,14 @@ p.info-list__item {
 @media (max-width: 575.98px) {
   .-donations .hero.hero-sub {
     min-height: auto;
+  }
+}
+.-donations .hero.hero-sub .hero__image {
+  background-size: cover;
+}
+@media (max-width: 767.98px) {
+  .-donations .hero.hero-sub .hero__image {
+    display: block;
   }
 }
 
