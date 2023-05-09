@@ -1,0 +1,639 @@
+
+	
+	<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- <base href="/"> -->
+
+    <title>ElmoreLab Lineage Server</title>
+    <meta name="description" content="Site description" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+
+    <!-- <meta property="og:image" content="images/dist/preview.jpg"> -->
+
+    <link
+      rel="preload"
+      as="font"
+      href="fonts/ElMessiri-regular.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="fonts/ElMessiri-medium.woff2"
+      crossorigin="anonymous"
+    />
+		<link
+      rel="preload"
+      as="font"
+      href="fonts/ElMessiri-semibold.woff2"
+      crossorigin="anonymous"
+    />
+		<link
+      rel="preload"
+      as="font"
+      href="fonts/ElMessiri-bold.woff2"
+      crossorigin="anonymous"
+    />
+		<link
+      rel="preload"
+      as="font"
+      href="fonts/CormorantGaramond-semibold.woff2"
+      crossorigin="anonymous"
+    />
+		<link
+      rel="preload"
+      as="font"
+      href="fonts/GermaniaOne-regular.woff2"
+      crossorigin="anonymous"
+    />
+		<link
+      rel="preload"
+      as="font"
+      href="fonts/Ubuntu-regular.woff2"
+      crossorigin="anonymous"
+    />
+		<link
+      rel="preload"
+      as="font"
+      href="fonts/Ubuntu-medium.woff2"
+      crossorigin="anonymous"
+    />
+		<link
+      rel="preload"
+      as="font"
+      href="fonts/Ubuntu-bold.woff2"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+
+  <body class="main">
+		<div class="clouds-top"></div>
+    <header class="header">
+			<div class="header__container _container">
+				<div class="header__menu menu">
+					<nav class="menu__body d-flex">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a class="menu__link _active" href="/index.html" data-i18n="menu.home">Home</a>
+							</li>
+							<li class="menu__item -menu-account">
+								<a class="menu__link" href="/index.html" data-i18n="menu.account">Account Settings</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="/download.html" data-i18n="menu.download">Download</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="/donations.html" data-i18n="menu.donation">Donation</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="/forum.html" data-i18n="menu.forum">Forum</a>
+							</li>
+							<li class="menu__item -menu-database">
+								<a class="menu__link" href="/database.html" data-i18n="header.db">Database</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="/tourneys.html" data-i18n="menu.tourneys">Tourneys</a>
+							</li>
+						</ul>
+					</nav>
+					<a class="btn btn-cabinet" href="#">
+						<svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="13.5" cy="6.25" r="5.25" stroke-width="2"/>
+							<path d="M1 20.9151C11.9091 7.73326 22.2121 15.4227 26 20.9151" stroke-width="2"/>
+						</svg>
+					</a>
+					<div class="progress-container">
+						<a href="#" class="progress-support__link">
+							<div class="btn-gold">
+								<span class="progress-support__link-text">99%</span>
+								<span class="btn-gold__bg"></span>
+								<span class="btn-gold__bg-hover"></span>
+								<span class="btn-gold__shadow"></span>
+								<span class="btn-gold__glowing"></span>
+							</div>
+							<div class="progress-support">
+								<span class="progress-support__text" data-i18n="header.support">server support</span>
+								<div class="-js-tip tip-info">
+									<svg width="16" height="21" viewBox="0 0 16 21" fill="none" class="progress-support__info">
+										<path d="M7.83 14V9.11H8.62V14H7.83ZM8.23 8.35C8.05667 8.35 7.91 8.29333 7.79 8.18C7.67667 8.06667 7.62 7.92333 7.62 7.75C7.62 7.57 7.67667 7.42333 7.79 7.31C7.91 7.19667 8.05667 7.14 8.23 7.14C8.40333 7.14 8.54667 7.19667 8.66 7.31C8.77333 7.42333 8.83 7.57 8.83 7.75C8.83 7.92333 8.77333 8.06667 8.66 8.18C8.54667 8.29333 8.40333 8.35 8.23 8.35Z" />
+										<path d="M8.31818 16.1818C7.49242 16.1818 6.71591 16.0265 5.98864 15.7159C5.26515 15.4053 4.62689 14.9754 4.07386 14.4261C3.52462 13.8731 3.0928 13.2348 2.77841 12.5114C2.4678 11.7879 2.31439 11.0114 2.31818 10.1818C2.32197 9.35227 2.47917 8.57576 2.78977 7.85227C3.10417 7.12879 3.53598 6.49242 4.08523 5.94318C4.63447 5.39015 5.27083 4.95833 5.99432 4.64773C6.7178 4.33712 7.49242 4.18182 8.31818 4.18182C9.14773 4.18182 9.92424 4.33712 10.6477 4.64773C11.375 4.95833 12.0114 5.39015 12.5568 5.94318C13.1061 6.49242 13.536 7.12879 13.8466 7.85227C14.1572 8.57576 14.3144 9.35227 14.3182 10.1818C14.322 11.0114 14.1686 11.7879 13.858 12.5114C13.5473 13.2348 13.1174 13.8731 12.5682 14.4261C12.0189 14.9754 11.3807 15.4053 10.6534 15.7159C9.92614 16.0265 9.14773 16.1818 8.31818 16.1818ZM8.31818 14.8636C8.96591 14.8636 9.57386 14.7424 10.142 14.5C10.7102 14.2576 11.2083 13.9223 11.6364 13.4943C12.0644 13.0663 12.3996 12.5701 12.642 12.0057C12.8845 11.4375 13.0038 10.8314 13 10.1875C12.9962 9.53977 12.8731 8.93182 12.6307 8.36364C12.3883 7.79545 12.053 7.29735 11.625 6.86932C11.197 6.44129 10.7008 6.10606 10.1364 5.86364C9.57197 5.62121 8.96591 5.5 8.31818 5.5C7.67424 5.5 7.07008 5.62121 6.50568 5.86364C5.94129 6.10606 5.44508 6.44318 5.01705 6.875C4.58902 7.30303 4.25189 7.80114 4.00568 8.36932C3.76326 8.93371 3.64015 9.53977 3.63636 10.1875C3.63258 10.8277 3.75189 11.4318 3.99432 12C4.23674 12.5644 4.57197 13.0606 5 13.4886C5.43182 13.9167 5.92992 14.2538 6.49432 14.5C7.0625 14.7424 7.67045 14.8636 8.31818 14.8636Z"/>
+									</svg>
+									<div class="-js-tip-window">
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum at ipsam necessitatibus quasi! Labore veritatis rerum accusamus fuga neque soluta corrupti magnam ipsum nemo, facere, autem excepturi numquam dolores? Eveniet.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="start-play">
+						<a class="btn-gold" href="#">
+							<span class="btn-gold__content">
+								<span class="db-ico"></span>
+								<span class="btn-gold__text" data-i18n="header.db">Database</span>
+							</span>
+							<span class="btn-gold__bg"></span>
+							<span class="btn-gold__bg-hover"></span>
+							<span class="btn-gold__shadow"></span>
+							<span class="btn-gold__glowing"></span>
+						</a>
+					</div>
+					<div class="header-lang">
+						<a href="" class="header-lang__link _ru" data-lang="ru"><span>Ru</span></a>
+						<a href="" class="header-lang__link _en _active" data-lang="en"><span>En</span></a>
+					</div>
+					<div class="menu__icon">
+						<span></span>
+					</div>
+				</div>
+			</div>
+    </header>
+
+    <div class="wrapper -overflow-visible">
+
+
+
+
+	<section class="hero -js-hero">
+		<div class="hero__image"></div>
+
+		<div class="hero__banner">
+			<a href="#-js-top-players" class="hero__banner-image _goto-block">
+				<span class="banner__text" data-i18n="header.hall">Top players</span>
+			</a>
+		</div>
+
+		<div class="hero__controls">
+			<div class="hero__controls-socials">
+				<a href="" class="control-link ico-discord" target="_blank">discord</a>
+				<a href="" class="control-link ico-tg" target="_blank">telegram</a>
+				<a href="" class="control-link ico-youtube" target="_blank">youtube</a>
+			</div>
+
+		</div>
+		<div class="hero__middle d-column">
+			<a href="/" class="hero__logotype">Elmore Lab</a>
+			<div class="hero__start-play">
+				<a href="" class="start">
+					<span class="start__text" data-i18n="header.start">Start Play</span>
+					<span class="start-hover"></span>
+				</a>
+			</div>
+			<div class="hero__middle-servers">
+				<a class="server -js-tip tip-server" href="#tip-server">
+					<span class="server__title">X1 Server TEON</span>
+					<span class="server__online">
+						<i class="_online"></i>
+						<span class="online__online-title">1500</span>
+					</span>
+					<div class="-js-tip-window">
+						<div class="server-tip__row">
+							<span class="server__title" data-i18n="header.online">online</span>
+							<span class="server__online">
+								<i class="_online"></i>
+								<span class="online__online-title">1000</span>
+							</span>
+						</div>
+						<div class="server-tip__row">
+							<span class="server__title" data-i18n="header.offlinestore">offline store</span>
+							<span class="server__online">
+								<i class="_online"></i>
+								<span class="online__online-title">500</span>
+							</span>
+						</div>
+						<div class="server-tip__row">
+							<span class="server__title" data-i18n="header.overallonline">overall online</span>
+							<span class="server__online">
+								<i class="_online"></i>
+								<span class="online__online-title">1500</span>
+							</span>
+						</div>
+					</div>
+				</a>
+				<div class="line-sm"></div>
+				<a class="server -js-tip tip-server" href="#tip-server">
+					<span class="server__title">X1 Server BARTZ</span>
+					<span class="server__online">
+						<i class="_online"></i>
+						<span class="online__online-title">1500</span>
+					</span>
+					<div class="-js-tip-window">
+						<div class="server-tip__row">
+							<span class="server__title" data-i18n="header.online">online</span>
+							<span class="server__online">
+								<i class="_online"></i>
+								<span class="online__online-title">1000</span>
+							</span>
+						</div>
+						<div class="server-tip__row">
+							<span class="server__title" data-i18n="header.offlinestore">offline store</span>
+							<span class="server__online">
+								<i class="_online"></i>
+								<span class="online__online-title">500</span>
+							</span>
+						</div>
+						<div class="server-tip__row">
+							<span class="server__title" data-i18n="header.overallonline">overall online</span>
+							<span class="server__online">
+								<i class="_online"></i>
+								<span class="online__online-title">1500</span>
+							</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	
+	<!-- section news-servers -->
+	<section class="section-clouds">
+		<div class="clouds__image"></div>
+		<div class="main__news _container -negative-margin">
+			<!-- Slider main container -->
+			<div class="swiper">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<div class="swiper-slide a">
+						<a href="" class="slider-link">
+							<div class="swiper-slide__data">
+								<p class="data-row -month">03 / 04</p>
+								<p class="data-row -year">2023</p>
+							</div>
+							<div class="swiper-slide__img">
+								<img src="images/dist/card-2.png" alt="">
+							</div>
+							<div class="slide-content">
+								<h2 class="slide-content__title" data-i18n="news.title2">Greedy dwarf</h2>
+								<h3 class="slide-content__subtitle" data-i18n="news.subtitle2">Event "Greedy dwarf"</h3>
+								<div class="btn-gold slide-content__link">
+									<span class="btn-gold__default" data-i18n="news.read">Read more</span>
+									<span class="btn-gold__bg"></span>
+									<span class="btn-gold__bg-hover"></span>
+									<span class="btn-gold__shadow"></span>
+									<span class="btn-gold__glowing"></span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide b">
+						<a href="" class="slider-link">
+							<div class="swiper-slide__data">
+								<p class="data-row -month">03 / 04</p>
+								<p class="data-row -year">2023</p>
+							</div>
+							<div class="swiper-slide__img">
+								<img src="images/dist/card-3.png" alt="">
+							</div>
+							<div class="slide-content">
+								<h2 class="slide-content__title" data-i18n="news.title3">Memomania</h2>
+								<h3 class="slide-content__subtitle" data-i18n="news.subtitle3">Discord event. Memomania 2.0</h3>
+								<div class="btn-gold slide-content__link">
+									<span class="btn-gold__default" data-i18n="news.read">Read more</span>
+									<span class="btn-gold__bg"></span>
+									<span class="btn-gold__bg-hover"></span>
+									<span class="btn-gold__shadow"></span>
+									<span class="btn-gold__glowing"></span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide c">
+						<a href="" class="slider-link">
+							<div class="swiper-slide__data">
+								<p class="data-row -month">03 / 04</p>
+								<p class="data-row -year">2023</p>
+							</div>
+							<div class="swiper-slide__img">
+								<img src="images/dist/card-1.png" alt="">
+							</div>
+							<div class="slide-content">
+								<h2 class="slide-content__title" data-i18n="news.title1">Antaras was killed</h2>
+								<h3 class="slide-content__subtitle" data-i18n="news.subtitle1">First antaras was fallen!</h3>
+								<div class="btn-gold slide-content__link">
+									<span class="btn-gold__default" data-i18n="news.read">Read more</span>
+									<span class="btn-gold__bg"></span>
+									<span class="btn-gold__bg-hover"></span>
+									<span class="btn-gold__shadow"></span>
+									<span class="btn-gold__glowing"></span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div><!-- //end swiper -->
+			<div class="news__more">
+				<a href="#" class="btn btn-primary" data-i18n="news.readall">Read All News</a>
+			</div>
+		</div>
+		<div class="main__servers _container -js-tabs">
+			<div class="main__servers-tabs">
+				<a href="#tab1" class="-js-tab-link _active">X1 Server TEON</a>
+				<a href="#tab2" class="-js-tab-link">X3 Server BARTZ</a>
+			</div>
+			<div class="main__servers-content">
+				<!-- Teon -->
+				<div class="server-content -js-tab-contents _active _visible">
+					<div class="server-content__col">
+						<h3 class="server-title gold-title" data-i18n="rates">Rates</h3>
+						<div class="server-info">
+							<div class="server-info__col align-end">
+								<p class="info-item">Drop</p>
+								<p class="info-item">Boss drop</p>
+								<p class="info-item">Epic boss drop</p>
+							</div>
+							<div class="server-info__col info-rates">
+								<h3>X1</h3>
+							</div>
+							<div class="server-info__col">
+								<p class="info-item">Exp</p>
+								<p class="info-item">Adena</p>
+								<p class="info-item">Spoil</p>
+								<p class="info-item">Sp</p>
+							</div>
+						</div>
+					</div>
+					<div class="server-content__col">
+						<h3 class="server-title gold-title" data-i18n="quests">Quests</h3>
+						<div class="server-info">
+							<div class="server-info__col align-end">
+								<p class="info-item">Drop</p>
+								<p class="info-item">Boss drop</p>
+								<p class="info-item">Epic boss drop</p>
+							</div>
+							<div class="server-info__col info-rates">
+								<h3>X1</h3>
+							</div>
+							<div class="server-info__col">
+								<p class="info-item">Exp</p>
+								<p class="info-item">Adena</p>
+								<p class="info-item">Spoil</p>
+								<p class="info-item">Sp</p>
+							</div>
+						</div>
+					</div>
+					<div class="server-content__col">
+						<h3 class="server-title gold-title" data-i18n="features">Features</h3>
+						<div class="server-info">
+							<div class="server-info__col align-end">
+								<p class="info-item">Drop</p>
+								<p class="info-item">Boss drop</p>
+								<p class="info-item">Epic boss drop</p>
+							</div>
+							<div class="server-info__col info-rates">
+								<h3>X1</h3>
+							</div>
+							<div class="server-info__col">
+								<p class="info-item">No PA</p>
+								<p class="info-item">No donations for items</p>
+								<p class="info-item">No multi-boxing</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Bartz -->
+				<div class="server-content -js-tab-contents">
+					<div class="server-content__col">
+						<h3 class="server-title gold-title" data-i18n="rates">Rates</h3>
+						<div class="server-info">
+							<div class="server-info__col align-end">
+								<p class="info-item">Drop</p>
+								<p class="info-item">Boss drop</p>
+								<p class="info-item">Epic boss drop</p>
+							</div>
+							<div class="server-info__col info-rates">
+								<h3>X1</h3>
+							</div>
+							<div class="server-info__col">
+								<p class="info-item">Exp 1</p>
+								<p class="info-item">Adena 1</p>
+								<p class="info-item">Spoil 1</p>
+								<p class="info-item">Sp 1</p>
+							</div>
+						</div>
+					</div>
+					<div class="server-content__col">
+						<h3 class="server-title gold-title" data-i18n="quests">Quests</h3>
+						<div class="server-info">
+							<div class="server-info__col align-end">
+								<p class="info-item">Drop</p>
+								<p class="info-item">Boss drop</p>
+								<p class="info-item">Epic boss drop</p>
+							</div>
+							<div class="server-info__col info-rates">
+								<h3>X1</h3>
+							</div>
+							<div class="server-info__col">
+								<p class="info-item">Exp</p>
+								<p class="info-item">Adena</p>
+								<p class="info-item">Spoil</p>
+								<p class="info-item">Sp</p>
+							</div>
+						</div>
+					</div>
+					<div class="server-content__col">
+						<h3 class="server-title gold-title" data-i18n="features">Features</h3>
+						<div class="server-info">
+							<div class="server-info__col align-end">
+								<p class="info-item">Drop</p>
+								<p class="info-item">Boss drop</p>
+								<p class="info-item">Epic boss drop</p>
+							</div>
+							<div class="server-info__col info-rates">
+								<h3>X1</h3>
+							</div>
+							<div class="server-info__col">
+								<p class="info-item">No PA</p>
+								<p class="info-item">No donations for items</p>
+								<p class="info-item">No multi-boxing</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="center__more">
+					<a href="#" class="btn btn-primary" data-i18n="findoutmore">Find Out More</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-tower">
+		<div class="tower__image"></div>
+		<div class="clouds-bottom"></div>
+		<div class="streams _container">
+			<h2 class="section-title" data-i18n="streams.title">Online Streams</h2>
+			<div class="streams__container">
+				<div class="stream-body">
+					<picture>
+						<source srcset='images/dist/stream.webp' type='image/webp'>
+						<img src='images/dist/stream.png' alt='image'>
+					</picture>
+				</div>
+				<div class="stream-controls">
+					<a href="#" class="btn btn-primary" data-i18n="streams.publish">Post stream</a>
+					<a href="#" class="btn btn-primary" data-i18n="streams.more">Watch streams</a>
+				</div>
+			</div>
+		</div>
+		<div class="epic two-cols _container">
+			<div class="epic-hall">
+				<h2 class="section-title -js-top-players" data-i18n="header.hall">Top players</h2>
+				<h3 class="section-info" data-i18n="topdate">Top febrary 10</h3>
+				<div class="two-cols">
+					<div class="col-info">
+						<h4 class="info-title">X1 Server TEON</h4>
+						<div class="info-list">
+							<p class="info-list__item">Evo23</p>
+							<p class="info-list__item">Assembler</p>
+							<p class="info-list__item">Divor</p>
+							<p class="info-list__item">Cutes</p>
+							<p class="info-list__item">Sabrinka</p>
+							<p class="info-list__item">dworkin</p>
+							<p class="info-list__item">KoLL1aK</p>
+							<p class="info-list__item">ARTIZAN</p>
+							<p class="info-list__item">innerg</p>
+							<p class="info-list__item">Vozita</p>
+							<p class="info-list__item">FreeNavalny</p>
+							<p class="info-list__item">sQwen</p>
+						</div>
+					</div>
+					<div class="col-info">
+						<h4 class="info-title">X3 Server BARTZ</h4>
+						<div class="info-list">
+							<p class="info-list__item">VolodiaDeath</p>
+							<p class="info-list__item">Shinka</p>
+							<p class="info-list__item">ShishiroB0tan</p>
+							<p class="info-list__item">Tootsie</p>
+							<p class="info-list__item">Aktimel</p>
+							<p class="info-list__item">scareface</p>
+							<p class="info-list__item">Lirazel</p>
+							<p class="info-list__item">Gabella</p>
+							<p class="info-list__item">Yuliya</p>
+							<p class="info-list__item">Bizas</p>
+							<p class="info-list__item">DanceOfKing</p>
+							<p class="info-list__item">LiquidDeath</p>
+							<p class="info-list__item">Tranquillity</p>
+						</div>
+					</div>
+				</div>
+				<h3 class="epic-hall__thanks thanks-text" data-i18n="thanks">
+					Thank you for supporting the project!
+				</h3>
+				<a href="/donations.html" class="btn btn-primary" data-i18n="alldons">all sponsors</a>
+			</div>
+			<div class="epic-winners">
+				<h2 class="section-title" data-i18n="winners">Tourney winners</h2>
+				<div class="three-cols">
+					<div class="col-bg">
+						<h4 class="info-title">X1 Server TEON</h4>
+						<div class="info-list">
+							<p class="info-list__item mb-4">52+. YouUnderDog</p>
+							<p class="info-list__item">iFun</p>
+							<p class="info-list__item">DoReMi</p>
+							<p class="info-list__item">Alania</p>
+							<p class="info-list__item mb-4">45-51. RedTerror</p>
+							<p class="info-list__item">Assist</p>
+							<p class="info-list__item">Fransys</p>
+							<p class="info-list__item">Idea</p>
+						</div>
+					</div>
+					<div class="col-sword"></div>
+					<div class="col-bg">
+						<h4 class="info-title">X3 Server BARTZ</h4>
+						<div class="info-list">
+							<p class="info-list__item">I. Thugs</p>
+							<p class="info-list__item">II. DictumFactum1</p>
+							<p class="info-list__item">III. DictumFactum2</p>
+						</div>
+					</div>
+				</div>
+				<div class="bottom-button">
+					<a href="#" class="btn btn-primary" data-i18n="alltourneys">all tourneys</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer section" id="footer">
+			<div class="footer__container _container">
+				<div class="footer-col col-copyrights">
+					<a class="footer-logotype" href="#top">ElmoreLab</a>
+					<p class="footer-copyrights" data-i18n="copyrights">
+						© this is an emulator of the mmorpg game,
+						running for informational purposes only.
+					</p>
+				</div>
+				<div class="footer-col col-nav">
+					<ul class="footer-nav">
+						<li class="footer-nav__link"><a href="/index.html" data-i18n="menu.home">Home</a></li>
+						<li class="footer-nav__link"><a href="/download.html" data-i18n="menu.download">Download</a></li>
+						<li class="footer-nav__link"><a href="/donations.html" data-i18n="menu.donation">Donation</a></li>
+					</ul>
+					<ul class="footer-nav">
+						<li class="footer-nav__link"><a href="/forum.html" data-i18n="menu.forum">Forum</a></li>
+						<li class="footer-nav__link"><a href="/tourneys.html" data-i18n="menu.tourneys">Tourneys</a></li>
+					</ul>
+				</div>
+				<div class="footer-col col-controls">
+					<a class="btn btn-cabinet" href="#">
+						<svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="13.5" cy="6.25" r="5.25" stroke-width="2"></circle>
+							<path d="M1 20.9151C11.9091 7.73326 22.2121 15.4227 26 20.9151" stroke-width="2"></path>
+						</svg>
+					</a>
+					<a href="" class="start">
+						<span class="start__text" data-i18n="header.start" innerhtml="Start Play">Start Play</span>
+						<span class="start-hover"></span>
+					</a>
+				</div>
+			</div>
+			<a href="#-js-hero" class="back-top _goto-block">
+				<svg width="16" height="9" viewBox="0 0 16 9" fill="none">
+					<path d="M8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 1.5V1H7V1.5H9Z" fill="white"/>
+				</svg>
+			</a>
+		</footer>
+	</section>
+
+	
+
+
+
+</div> <!-- /.wrapper -->
+
+
+
+
+
+
+
+	<script src="js/app.min.js" defer></script>
+
+	</body>
+</html>
+

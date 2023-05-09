@@ -1,0 +1,70 @@
+{
+  "title": "How To Cook A Juicy Chicken Breast",
+  "content": "There’s a big difference between juicy chicken breasts and rubbery chicken breasts. Obviously, you want to avoid the latter at all costs. Follow these 4 steps and you’re gold. You want to add protein to favorites like Caesar salad or fix up a quick chicken salad or club sandwich? Try this method and savor the results.",
+  "ingredients": {
+    "title": "Ingredients",
+    "$0": "1 pound boneless chicken breasts",
+    "$1": "2 teaspoons olive oil",
+    "$2": "salt and pepper"
+  },
+	"menu": {
+		"home": "Home",
+		"download": "Download",
+		"donation": "Donation",
+		"forum": "Forum",
+		"tourneys": "Tourneys",
+		"account": "Account Settings"
+	},
+	"header": {
+		"support": "server support",
+		"db": "Database",
+		"hall": "Top Players",
+		"start": "Start Play",
+		"online": "online",
+		"offlinestore": "offline store",
+		"overallonline": "overall online"
+	},
+	"news": {
+		"read": "Read more",
+		"readall": "Read all news",
+		"title1": "Antaras was killed",
+		"subtitle1": "First antaras was fallen!",
+		"title2": "Greedy dwarf",
+		"subtitle2": "Event \"Greedy dwarf\"",
+		"title3": "Memomania",
+		"subtitle3": "Discord event. Memomania 2.0"
+	},
+	"link": "link",
+	"rates": "Rates",
+	"features": "Features",
+	"quests": "Quests",
+	"findoutmore": "Find Out More",
+	"streams": {
+		"title": "Online streams",
+		"publish": "Post stream",
+		"more": "Watch streams"
+	},
+	"download": {
+		"client": "Prepared C5 Client",
+		"install": "С5 Installer",
+		"automatic": "Automatical",
+		"patches": "Valuable patches",
+		"patch": "patches",
+		"clientc2": "Prepared C2 Client",
+		"installc2": "С2 Installer",
+		"preparedc2": "C2即用型客户端 / Prepared C2 Client (Chinese)",
+		"updaterc2": "C2自动更新器 / Automatical C2 Updater (Chinese)"
+	},
+	"topdate": "Top febrary 10",
+	"thanks": "thank you for supporting the project!",
+	"alldons": "all sponsors",
+	"winners": "Tourney winners",
+	"alltourneys": "All tourneys",
+	"copyrights": "© this is an emulator of the mmorpg game, running for informational purposes only.",
+	"tourneys": {
+		"title": "Tourneys",
+		"subtitle": "This is a place that keeps the memory of the great heroes who won honor and glory in tournaments"
+	},
+	"allsponsors": "Elmorelab All Sponsors",
+	"showmore": "Show more"
+}

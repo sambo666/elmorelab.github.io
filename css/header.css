@@ -1,0 +1,35 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0; }
+  .header__wrapper {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50; }
+  .header__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 5px 0;
+    min-height: 125px; }
+  .header__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 39.83871%;
+            flex: 0 0 39.83871%; }
+  .header__logo {
+    color: #000;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120.83333%; }
