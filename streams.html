@@ -383,7 +383,6 @@
 				.then((res) => res.json())
 				.then((data) => {
 					if(data.data?.length > 0) {
-						numCallbackRuns++;
 						if(data.data[0].type == 'live') {
 							const link = `https://player.twitch.tv/?channel=`+data.data[0].user_login+`&parent=elmorelab.com&autoplay=false&muted=false&theme=dark`;
 							links.push(link);
@@ -396,17 +395,19 @@
 
 			function renderStreams(data) {
 				let hide = '';
+				numCallbackRuns++;
 				if (numCallbackRuns > 4) {
 					hide = 'd-none';
 					return;
 				}
 				let streamBlock = document.getElementById('-js-streams-list');
-				streamBlock.innerHTML += `<div class="stream-card ${hide}">
+				const streamHtml = `<div class="stream-card ${hide}">
 																		<iframe
 																				src="`+data+`"
 																				frameborder="0" allowfullscreen="true" autoplay='false'>
 																		</iframe>
 																	</div>`;
+				streamBlock.insertAdjacentHTML('beforeend', streamHtml);
       }
 
 			async function fetchStreamersJSON() {
@@ -432,7 +433,7 @@
 				links.splice(0, 4);
 				numCallbackRuns = 0;
 				links.forEach(el => {
-					renderStreams(el.twitch)
+					renderStreams(el)
 				});
 				//console.log(numCallbackRuns)
 			})
