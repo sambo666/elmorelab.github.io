@@ -41,8 +41,11 @@
 	"findoutmore": "Find Out More",
 	"streams": {
 		"title": "Online streams",
+		"pagetitle": "Streams",
 		"publish": "Post stream",
-		"more": "Watch streams"
+		"more": "Watch streams",
+		"invite": "Want to see your broadcast here?",
+		"showmore": "Show more"
 	},
 	"download": {
 		"client": "Prepared C5 Client",
