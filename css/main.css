@@ -5514,6 +5514,9 @@ h3 {
     display: none;
   }
 }
+.epic-winners .section-title {
+  margin-bottom: 0.125rem;
+}
 
 .col-bg {
   display: -webkit-box;
@@ -5543,8 +5546,8 @@ h3 {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .col-bg .info-list {
-  padding: 4rem 0;
-  margin-top: 0.75rem;
+  padding: 2rem 0;
+  margin-top: 2rem;
   width: 100%;
   background-color: rgba(242, 231, 201, 0.1);
   border-radius: 7px;
@@ -5778,11 +5781,11 @@ h3 {
   min-width: 42rem;
 }
 .item-content:not(:last-child) {
-  margin: 1rem 0 2.5rem;
+  margin: 1rem 0 3.75rem;
 }
 @media (max-width: 767.98px) {
   .item-content:not(:last-child) {
-    margin: 0.5rem 0 2rem;
+    margin: 0.5rem 0 2.5rem;
   }
 }
 .item-content:last-child {
@@ -6272,34 +6275,6 @@ p.info-list__item {
   .all-dons.grid-4 {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-  }
-}
-
-.donations-hall-title {
-  position: absolute;
-  top: 8.75rem;
-  width: 100%;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #F2E7C9;
-  text-transform: uppercase;
-  text-align: center;
-}
-@media (max-width: 1161.98px) {
-  .donations-hall-title {
-    top: 8.5rem;
-    font-size: 2rem;
-  }
-}
-@media (max-width: 991.98px) {
-  .donations-hall-title {
-    top: 7.75rem;
-    font-size: 1.75rem;
-  }
-}
-@media (max-width: 767.98px) {
-  .donations-hall-title {
-    display: none;
   }
 }
 
