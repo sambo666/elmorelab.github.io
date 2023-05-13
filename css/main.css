@@ -3404,7 +3404,7 @@ h3 {
 @media (max-width: 575.98px) {
   .hero-sub .start__text {
     top: 1px;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 @media (max-width: 767.98px) {
@@ -3550,11 +3550,6 @@ h3 {
 .-transparent .start__text {
   opacity: 0.8;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-@media (max-width: 575.98px) {
-  .-transparent .start__text {
-    display: none;
-  }
 }
 
 .-negative-margin {
@@ -6179,6 +6174,11 @@ p.info-list__item {
     margin-top: 1rem;
   }
 }
+@media (max-width: 575.98px) {
+  .donations .section-title:first-child {
+    margin-top: 2rem;
+  }
+}
 
 @media (max-width: 767.98px) {
   .-donations.-sub-pages .clouds-bottom {
@@ -6226,12 +6226,12 @@ p.info-list__item {
 }
 @media (max-width: 767.98px) {
   .-donations .hero-sub .hero__start-play::after, .-donations .hero-sub .hero__start-play::before {
-    width: calc(50% - 100px);
+    width: calc(50% - 120px);
   }
 }
 @media (max-width: 575.98px) {
   .-donations .hero-sub .hero__start-play::after, .-donations .hero-sub .hero__start-play::before {
-    width: calc(50% - 65px);
+    width: calc(50% - 85px);
   }
 }
 
