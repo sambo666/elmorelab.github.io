@@ -3257,12 +3257,12 @@ h3 {
   .clouds-top {
     background-position: center -12rem;
     opacity: 1;
+    background-size: cover;
   }
 }
 @media (min-width: 1920px) {
   .clouds-top {
     background-position: center -17rem;
-    background-size: cover;
   }
 }
 @media (min-width: 2560px) {
@@ -3889,6 +3889,14 @@ h3 {
           transform: translateY(-35%);
   left: 0;
   z-index: 999;
+}
+@media (max-height: 940px) {
+  .hero__banner {
+    top: 30%;
+    -webkit-transform: translateY(-30%);
+        -ms-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
 }
 @media (max-width: 1161.98px) {
   .hero__banner {
