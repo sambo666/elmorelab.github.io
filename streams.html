@@ -345,7 +345,9 @@
 			let youtubekey = 'AIzaSyBTJzjOBu60nHncD0QDcO-TsBXja8967rI';
 
 			let numCallbackRuns = 0;
-			let links = []
+			let links = [];
+
+			let streamBlock = document.getElementById('-js-streams-list');
 
 			function getTwitchAuthorization() {
 				let url = `https://id.twitch.tv/oauth2/token?client_id=${clinetId}&darkpopout&client_secret=${clinetSecret}&grant_type=client_credentials`;
@@ -390,7 +392,6 @@
 						}
 					}
 				})
-
 			}
 
 			function renderStreams(data) {
@@ -400,7 +401,6 @@
 					hide = 'd-none';
 					return;
 				}
-				let streamBlock = document.getElementById('-js-streams-list');
 				const streamHtml = `<div class="stream-card ${hide}">
 																		<iframe
 																				src="`+data+`"
@@ -419,7 +419,7 @@
 			fetchStreamersJSON().then(json => {
 				const streamers = json.streamers;
 				if (streamers.length > 0) {
-					streamers.forEach(el => {
+					streamers.forEach( el => {
 						if (el.twitch) {
 							getTwitchStreams(el.twitch)
 						}
@@ -437,6 +437,7 @@
 				});
 				//console.log(numCallbackRuns)
 			})
+
 
 	</script>
 
