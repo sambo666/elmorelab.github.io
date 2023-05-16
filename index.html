@@ -488,11 +488,8 @@
 		<div class="streams _container">
 			<h2 class="section-title" data-i18n="streams.title">Online Streams</h2>
 			<div class="streams__container">
-				<div class="stream-body">
-					<picture>
-						<source srcset='images/dist/stream.webp' type='image/webp'>
-						<img src='images/dist/stream.png' alt='image'>
-					</picture>
+				<div class="stream-body" id="-js-streams-list" data-stream="featured">
+
 				</div>
 				<div class="stream-controls">
 					<a href="#" class="btn btn-primary" data-i18n="streams.publish">Post stream</a>
@@ -633,6 +630,7 @@
 
 
 	<script src="js/app.min.js" defer></script>
+	<script src="./streamers/streams.js" defer></script>
 
 	</body>
 </html>

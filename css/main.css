@@ -6498,12 +6498,12 @@ p.info-list__item {
 }
 @media (max-width: 991.98px) {
   .stream-card {
-    padding-top: 62%;
+    padding-top: 56.25%;
   }
 }
 @media (max-width: 575.98px) {
   .stream-card {
-    padding-top: 50%;
+    padding-top: 56.25%;
   }
 }
 .stream-card iframe {
