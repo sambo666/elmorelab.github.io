@@ -435,6 +435,9 @@
 				links.forEach(el => {
 					renderStreams(el)
 				});
+				if (!links.length) {
+					btn.classList.add('d-none');
+				}
 				//console.log(numCallbackRuns)
 			})
 
