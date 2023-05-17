@@ -45,7 +45,10 @@
 		"publish": "Post stream",
 		"more": "Watch streams",
 		"invite": "Want to see your broadcast here?",
-		"showmore": "Show more"
+		"showmore": "Show more",
+		"currently": "is currently",
+		"offline": "offline",
+		"loading": "loading"
 	},
 	"download": {
 		"client": "Prepared C5 Client",

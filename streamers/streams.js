@@ -1,6 +1,7 @@
-window.onload = function () {
+window.addEventListener("load", function() {
 
 	const STREAMERS_PATH = 'https://sambo666.github.io/elmorelab.github.io/streamers/streamers.json?v=123';
+	//const STREAMERS_PATH = '../streamers/streamers.json?v=123';
 
 	let clinetId = "eqeootvs7wxgswfm46vud0cu7tcreo";
 	let clinetSecret = "0jiyngk8dxxok0olzilcu5pgepfqc4";
@@ -49,7 +50,13 @@ window.onload = function () {
 		})
 		.then((res) => res.json())
 		.then((data) => {
-			if(data.data?.length > 0) {
+			if (category === 'featured' && data.data?.length === 0) {
+				const capOffline = document.querySelector('.-js-cap-offline');
+				const capLoading = document.querySelector('.-js-cap-loading');
+				capOffline.classList.remove('d-none');
+				capLoading.classList.add('d-none');
+			}
+			if (data.data?.length > 0) {
 				if(data.data[0].type == 'live') {
 					const link = `https://player.twitch.tv/?channel=`+data.data[0].user_login+`&parent=elmorelab.com&autoplay=false&muted=false&theme=dark`;
 					links.push(link);
@@ -107,4 +114,5 @@ window.onload = function () {
 			//console.log(numCallbackRuns)
 		})
 	}
-}
+
+})

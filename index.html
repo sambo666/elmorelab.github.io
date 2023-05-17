@@ -489,7 +489,17 @@
 			<h2 class="section-title" data-i18n="streams.title">Online Streams</h2>
 			<div class="streams__container">
 				<div class="stream-body" id="-js-streams-list" data-stream="featured">
-
+					<div class="stream-cap">
+						<div class="img-dagger img-dagger__left"></div>
+						<div class="img-dagger img-dagger__right"></div>
+						<div class="cap-container -js-cap-offline d-none">
+							<h3 class="cap-container__subtitle" data-i18n="streams.currently">is currently</h3>
+							<h2 class="cap-container__title" data-i18n="streams.offline">OFFLINE</h2>
+						</div>
+						<div class="cap-container -js-cap-loading">
+							<h2 class="cap-container__title" data-i18n="streams.loading">LOADING</h2>
+						</div>
+					</div>
 				</div>
 				<div class="stream-controls">
 					<a href="#" class="btn btn-primary" data-i18n="streams.publish">Post stream</a>
@@ -628,9 +638,9 @@
 
 
 
-
-	<script src="js/app.min.js" defer></script>
-	<script src="./streamers/streams.js" defer></script>
+	<script src="./streamers/streams.js" async></script>
+	<script src="./js/app.min.js" async></script>
+	
 
 	</body>
 </html>
