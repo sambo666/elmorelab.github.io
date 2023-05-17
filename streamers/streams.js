@@ -60,7 +60,7 @@ window.addEventListener("load", function() {
 				if(data.data[0].type == 'live') {
 					const link = `https://player.twitch.tv/?channel=`+data.data[0].user_login+`&parent=elmorelab.com&autoplay=false&muted=false&theme=dark`;
 					links.push(link);
-					renderStreams(link);
+					//renderStreams(link);
 				}
 			}
 		})
@@ -96,6 +96,16 @@ window.addEventListener("load", function() {
 					getTwitchStreams(el.twitch)
 				}
 			});
+			setTimeout(() => {
+				const currentStreams = links.splice(0, 4);
+				currentStreams.forEach(el => {
+					renderStreams(el)
+				});
+				console.log(links)
+				if (!links.length) {
+					btn.classList.add('d-none');
+				}
+			}, 1500);
 		}
 	});
 
@@ -103,9 +113,9 @@ window.addEventListener("load", function() {
 	if (btn) {
 		btn.addEventListener('click', (e) => {
 			e.preventDefault();
-			links.splice(0, 4);
+			const currentStreams = links.splice(0, 4);
 			numCallbackRuns = 0;
-			links.forEach(el => {
+			currentStreams.forEach(el => {
 				renderStreams(el)
 			});
 			if (!links.length) {
