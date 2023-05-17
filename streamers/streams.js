@@ -1,7 +1,7 @@
 window.addEventListener("load", function() {
 
-	//const STREAMERS_PATH = 'https://sambo666.github.io/elmorelab.github.io/streamers/streamers.json?v=123';
-	const STREAMERS_PATH = '../streamers/streamers.json?v=123';
+	const STREAMERS_PATH = 'https://sambo666.github.io/elmorelab.github.io/streamers/streamers.json?v=123';
+	//const STREAMERS_PATH = '../streamers/streamers.json?v=123';
 
 	let clinetId = "eqeootvs7wxgswfm46vud0cu7tcreo";
 	let clinetSecret = "0jiyngk8dxxok0olzilcu5pgepfqc4";
