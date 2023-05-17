@@ -5319,30 +5319,29 @@ h3 {
 }
 @media (max-width: 575.98px) {
   .cap-container__title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 .cap-container__title::after {
   content: "";
   position: absolute;
-  left: -2%;
+  left: 0;
   bottom: -18px;
   width: 104%;
   height: 5px;
   background-image: url("../images/dist/img-dot.svg");
   background-repeat: repeat-x;
   background-position: 0 0;
-  background-size: 20px 5px;
+  background-size: 22px 5px;
 }
 @media (max-width: 767.98px) {
   .cap-container__title::after {
-    background-size: 16px 5px;
+    background-size: 22px 5px;
   }
 }
 @media (max-width: 575.98px) {
   .cap-container__title::after {
-    left: -1%;
-    background-size: 15px 5px;
+    background-size: 19px 5px;
   }
 }
 
