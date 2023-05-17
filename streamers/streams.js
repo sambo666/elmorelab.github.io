@@ -69,10 +69,10 @@ window.addEventListener("load", function() {
 	function renderStreams(data) {
 		let hide = '';
 		numCallbackRuns++;
-		if (numCallbackRuns > 4) {
-			hide = 'd-none';
-			return;
-		}
+		// if (numCallbackRuns > 4) {
+		// 	hide = 'd-none';
+		// 	return;
+		// }
 		const streamHtml = `<div class="stream-card ${hide}">
 																<iframe
 																		src="`+data+`"
@@ -88,6 +88,9 @@ window.addEventListener("load", function() {
 		return streamers;
 	}
 
+	
+	const btn = document.querySelector('.-js-more-streams');
+
 	fetchStreamersJSON().then(json => {
 		const streamers = json[category];
 		if (streamers.length > 0) {
@@ -97,32 +100,27 @@ window.addEventListener("load", function() {
 				}
 			});
 			setTimeout(() => {
-				const currentStreams = links.splice(0, 4);
-				currentStreams.forEach(el => {
-					renderStreams(el)
-				});
-				console.log(links)
-				if (!links.length) {
-					btn.classList.add('d-none');
-				}
+				eachStreams()
 			}, 1500);
 		}
 	});
 
-	const btn = document.querySelector('.-js-more-streams');
 	if (btn) {
 		btn.addEventListener('click', (e) => {
 			e.preventDefault();
-			const currentStreams = links.splice(0, 4);
-			numCallbackRuns = 0;
-			currentStreams.forEach(el => {
-				renderStreams(el)
-			});
-			if (!links.length) {
-				btn.classList.add('d-none');
-			}
+			eachStreams()
 			//console.log(numCallbackRuns)
 		})
+	}
+
+	function eachStreams() {
+		const currentStreams = links.splice(0, 4);
+		currentStreams.forEach(el => {
+			renderStreams(el)
+		});
+		if (!links.length) {
+			btn && btn.classList.add('d-none');
+		}
 	}
 
 })
