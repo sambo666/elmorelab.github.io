@@ -125,7 +125,7 @@ window.addEventListener("load", function() {
 			});
 			setTimeout(() => {
 				eachStreams()
-			}, 1500);
+			}, 2500);
 		}
 	});
 
