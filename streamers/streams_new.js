@@ -117,7 +117,6 @@ window.addEventListener("load", function() {
 
 	fetchStreamersJSON().then(json => {
 		const streamers = json[category];
-		console.log(streamers)
 		if (streamers.length > 0) {
 			streamers.forEach( el => {
 				if (el.twitch) {

@@ -3314,7 +3314,6 @@ h3 {
   right: 0;
   top: 0;
   bottom: 0;
-  background-image: url("../images/dist/clouds-top.png");
   background-repeat: no-repeat;
   background-position: center -3rem;
   background-size: contain;
@@ -4167,7 +4166,6 @@ h3 {
   margin: 0 auto;
   width: 778px;
   height: 266px;
-  background-image: url("../images/dist/logotype.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
@@ -5521,7 +5519,6 @@ h3 {
   bottom: -11.5rem;
   width: 100%;
   height: 768px;
-  background-image: url("../images/dist/clouds-bottom.png");
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;
