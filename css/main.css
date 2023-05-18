@@ -5224,9 +5224,19 @@ h3 {
   border-radius: 7px;
   border: 3px solid #988E69;
   background: rgb(37, 36, 34);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(37, 36, 34)), color-stop(25%, rgb(32, 31, 29)), color-stop(75%, rgb(27, 26, 24)), to(rgb(22, 21, 19)));
-  background: -o-linear-gradient(top, rgb(37, 36, 34) 0%, rgb(32, 31, 29) 25%, rgb(27, 26, 24) 75%, rgb(22, 21, 19) 100%);
-  background: linear-gradient(180deg, rgb(37, 36, 34) 0%, rgb(32, 31, 29) 25%, rgb(27, 26, 24) 75%, rgb(22, 21, 19) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(37, 36, 34, 0.8)), color-stop(25%, rgba(32, 31, 29, 0.8)), color-stop(75%, rgba(27, 26, 24, 0.8)), to(rgba(22, 21, 19, 0.8)));
+  background: -o-linear-gradient(top, rgba(37, 36, 34, 0.8) 0%, rgba(32, 31, 29, 0.8) 25%, rgba(27, 26, 24, 0.8) 75%, rgba(22, 21, 19, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(37, 36, 34, 0.8) 0%, rgba(32, 31, 29, 0.8) 25%, rgba(27, 26, 24, 0.8) 75%, rgba(22, 21, 19, 0.8) 100%);
+}
+@media (max-width: 767.98px) {
+  .stream-cap {
+    border-width: 2px;
+  }
+}
+@media (max-width: 575.98px) {
+  .stream-cap {
+    border-width: 1px;
+  }
 }
 .stream-cap .img-dagger {
   position: absolute;
