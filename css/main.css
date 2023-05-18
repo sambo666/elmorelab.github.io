@@ -2058,6 +2058,20 @@ ol.counter li:before {
   background: linear-gradient(0deg, #68543d 0, #755f43 25%, #fbebc3 100%);
   -webkit-clip-path: polygon(97% 0, 100% 0%, 100% 100%, 4px 100%, 0 50%, 4px 0);
           clip-path: polygon(97% 0, 100% 0%, 100% 100%, 4px 100%, 0 50%, 4px 0);
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(191, 140, 96, 0.8);
+          box-shadow: 0px 0px 10px 2px rgba(191, 140, 96, 0.8);
+}
+.progress-length__glowing {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(248, 228, 175);
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+  opacity: 1;
 }
 
 @media (any-hover: hover) {
