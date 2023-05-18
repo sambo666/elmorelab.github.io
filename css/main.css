@@ -1974,9 +1974,29 @@ ol.counter li:before {
   -o-transition: all 0.15s ease 0s;
   transition: all 0.15s ease 0s;
 }
+.progress-support__link .btn-gold__bg {
+  -webkit-clip-path: polygon(97% 0, 100% 50%, 97% 100%, 3% 100%, 0 50%, 3% 0);
+          clip-path: polygon(97% 0, 100% 50%, 97% 100%, 3% 100%, 0 50%, 3% 0);
+  background: -o-linear-gradient(285deg, hsl(42deg, 0%, 78%) 0, hsl(39deg, 0%, 66%) 25%, hsl(37deg, 0%, 55%) 37%, hsl(33deg, 0%, 48%) 51%, hsl(34deg, 0%, 54%) 60%, hsl(40deg, 0%, 68%) 75%, hsl(42deg, 0%, 79%) 100%);
+  background: linear-gradient(165deg, hsl(42deg, 0%, 78%) 0, hsl(39deg, 0%, 66%) 25%, hsl(37deg, 0%, 55%) 37%, hsl(33deg, 0%, 48%) 51%, hsl(34deg, 0%, 54%) 60%, hsl(40deg, 0%, 68%) 75%, hsl(42deg, 0%, 79%) 100%);
+  -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25);
+  height: calc(100% + 1px);
+}
+.progress-support__link .btn-gold__bg-hover {
+  display: none;
+}
+.progress-support__link .btn-gold::before, .progress-support__link:hover .btn-gold::before {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsl(42deg, 0%, 82%)), color-stop(40%, hsl(39deg, 0%, 78%)), color-stop(60%, hsl(40deg, 0%, 46%)), to(hsl(42deg, 0%, 34%))) !important;
+  background: -o-linear-gradient(top, hsl(42deg, 0%, 82%) 0, hsl(39deg, 0%, 78%) 40%, hsl(40deg, 0%, 46%) 60%, hsl(42deg, 0%, 34%) 100%) !important;
+  background: linear-gradient(180deg, hsl(42deg, 0%, 82%) 0, hsl(39deg, 0%, 78%) 40%, hsl(40deg, 0%, 46%) 60%, hsl(42deg, 0%, 34%) 100%) !important;
+}
+.progress-support__link .btn-gold__glowing {
+  background-color: hsl(43deg, 18%, 87%);
+}
 .progress-support__link-text {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   color: #ffffff;
   font-family: "Ubuntu";
   font-size: 0.875rem;
@@ -1995,6 +2015,49 @@ ol.counter li:before {
 }
 .progress-support__link:hover .progress-support__text {
   color: #fff;
+}
+
+.progress-length {
+  position: absolute;
+  left: -2px;
+  top: -1px;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+  overflow: hidden;
+  overflow: visible;
+  height: calc(100% + 3px);
+  width: calc(100% + 4px);
+  -webkit-clip-path: polygon(97% 0, 100% 50%, 97% 100%, 3% 100%, 0 50%, 3% 0);
+          clip-path: polygon(97% 0, 100% 50%, 97% 100%, 3% 100%, 0 50%, 3% 0);
+}
+.progress-length span {
+  position: relative;
+  z-index: 2;
+  display: block;
+  top: 1px;
+  left: 2px;
+  height: calc(100% - 3px);
+  background: rgb(213, 185, 118);
+  background: -o-linear-gradient(280deg, hsl(42deg, 56%, 70%) 0, hsl(37deg, 48%, 66%) 30%, hsl(37deg, 44%, 46%) 50%, hsl(37deg, 44%, 52%) 70%, hsl(37deg, 48%, 60%) 80%, hsl(37deg, 48%, 66%) 100%);
+  background: linear-gradient(-190deg, hsl(42deg, 56%, 70%) 0, hsl(37deg, 48%, 66%) 30%, hsl(37deg, 44%, 46%) 50%, hsl(37deg, 44%, 52%) 70%, hsl(37deg, 48%, 60%) 80%, hsl(37deg, 48%, 66%) 100%);
+  -webkit-clip-path: polygon(100% 0, 100% 0%, 100% 100%, 4px 100%, 0 50%, 4px 0);
+          clip-path: polygon(100% 0, 100% 0%, 100% 100%, 4px 100%, 0 50%, 4px 0);
+}
+.progress-length span:nth-child(2) {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: block;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #68543d), color-stop(25%, #755f43), to(#fbebc3));
+  background: -o-linear-gradient(bottom, #68543d 0, #755f43 25%, #fbebc3 100%);
+  background: linear-gradient(0deg, #68543d 0, #755f43 25%, #fbebc3 100%);
+  -webkit-clip-path: polygon(97% 0, 100% 0%, 100% 100%, 4px 100%, 0 50%, 4px 0);
+          clip-path: polygon(97% 0, 100% 0%, 100% 100%, 4px 100%, 0 50%, 4px 0);
 }
 
 @media (any-hover: hover) {
