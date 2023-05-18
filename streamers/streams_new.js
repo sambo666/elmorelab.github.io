@@ -62,8 +62,9 @@ window.addEventListener("load", function() {
 				let newStr = thumbStr.replace(reW, "780");
 				newStr = newStr.replace(reH, "440");
 				if(data.data[0].type == 'live') {
-					//const link = `https://player.twitch.tv/?channel=`+data.data[0].user_login+`&parent=elmorelab.com&autoplay=false&muted=false&theme=dark`;
+					const link = `https://player.twitch.tv/?channel=`+data.data[0].user_login+`&parent=elmorelab.com&autoplay=false&muted=false&theme=dark`;
 					channels.push({
+						'link': link,
 						'login': data.data[0].user_login,
 						'preview': newStr,
 						'viewer_count': data.data[0].viewer_count
@@ -73,14 +74,18 @@ window.addEventListener("load", function() {
 		})
 	}
 
-	function renderStreams(login, el, currentStreamLink) {
+	function renderStreams(data, el, currentStreamLink) {
 		currentStreamLink.classList.add('d-none');
-		var options = {
-			channel: login,
-			autoplay: true
-		};
-
-		var player = new Twitch.Player(el, options);
+		const streamHtml = `<iframe
+													src="`+data+`"
+													frameborder="0" allowfullscreen="true" autoplay='false'>
+												</iframe>`;
+		el.insertAdjacentHTML('beforeend', streamHtml);
+		// var options = {
+		// 	channel: login,
+		// 	autoplay: true
+		// };
+		// var player = new Twitch.Player(el, options);
 	}
 
 	function renderCards(data) {
@@ -98,7 +103,7 @@ window.addEventListener("load", function() {
 		const currentStreamLink = currentStream.querySelector('a');
 		currentStreamLink.addEventListener('click', (e) => {
 			e.preventDefault;
-			renderStreams(data.login, currentStream, currentStreamLink);
+			renderStreams(data.link, currentStream, currentStreamLink);
 		});
 	}
 
