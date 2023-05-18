@@ -995,9 +995,9 @@ textarea {
   border-bottom: 1px solid #8032BA;
 }
 .form__input._error {
-  -webkit-box-shadow: inset 0px -5px 5px rgba(252, 100, 100, 0.02);
-          box-shadow: inset 0px -5px 5px rgba(252, 100, 100, 0.02);
-  border-bottom: 1px solid #FC6464;
+  -webkit-box-shadow: inset 0px -5px 5px rgba(255, 0, 0, 0.02);
+          box-shadow: inset 0px -5px 5px rgba(255, 0, 0, 0.02);
+  border-bottom: 1px solid #ff0000;
 }
 
 .form__label {
@@ -6837,6 +6837,68 @@ p.info-list__item {
 
 ._webp .stream-card::after {
   background-image: url("../images/dist/twig.webp");
+}
+
+.stream-preview {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.stream-preview::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  border: 3px solid #988e69;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 2;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .stream-preview:hover::before {
+    opacity: 1;
+  }
+}
+.stream-preview .stream-status, .stream-preview .stream-viewer {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  left: 0.75rem;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  color: #fff;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  padding: 3px 5px;
+}
+.stream-preview .stream-status {
+  top: 0.75rem;
+  background-color: #ff0000;
+  text-transform: uppercase;
+  padding: 3px 5px;
+  font-size: 0.875rem;
+}
+.stream-preview .stream-viewer {
+  bottom: 0.75rem;
+  padding: 3px 5px 3px 20px;
+  font-size: 0.8125rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url("../images/dist/ico-user.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 4px center;
 }
 
 .root, .root > div, .tw-root--theme-light body {

@@ -1,6 +1,6 @@
 window.addEventListener("load", function() {
-	const STREAMERS_PATH = 'https://sambo666.github.io/elmorelab.github.io/streamers/streamers.json?v=123';
-	//const STREAMERS_PATH = '../streamers/streamers.json?v=123';
+	//const STREAMERS_PATH = 'https://sambo666.github.io/elmorelab.github.io/streamers/streamers.json?v=123';
+	const STREAMERS_PATH = '../streamers/streamers.json?v=123';
 
 	let clinetId = "eqeootvs7wxgswfm46vud0cu7tcreo";
 	let clinetSecret = "0jiyngk8dxxok0olzilcu5pgepfqc4";
@@ -63,43 +63,26 @@ window.addEventListener("load", function() {
 				newStr = newStr.replace(reH, "440");
 				if(data.data[0].type == 'live') {
 					//const link = `https://player.twitch.tv/?channel=`+data.data[0].user_login+`&parent=elmorelab.com&autoplay=false&muted=false&theme=dark`;
-					channels.push({
-						'login': data.data[0].user_login,
-						'preview': newStr,
-						'viewer_count': data.data[0].viewer_count
-					});
+					channels.push({'login':data.data[0].user_login, 'preview':newStr});
 				}
 			}
 		})
 	}
 
-	function renderStreams(login, el, currentStreamLink) {
-		currentStreamLink.classList.add('d-none');
+	function renderStreams(data) {
+		let hide = '';
+		numCallbackRuns++;
+		const streamHtml = `<div class="stream-card ${hide}" id="card-${numCallbackRuns}">
+														</div>`;
+		streamBlock.insertAdjacentHTML('beforeend', streamHtml);
+
 		var options = {
-			channel: login,
-			autoplay: true
+			channel: data,
+			autoplay: false
 		};
 
-		var player = new Twitch.Player(el, options);
-	}
-
-	function renderCards(data) {
-		numCallbackRuns++;
-		const previewLink = `<a class="stream-preview _ibg" href="javascript:void(0)">
-													<span class="stream-status">ONLINE</span>
-													<span class="stream-viewer">${data.viewer_count}</span>
-													<img src=${data.preview} />
-												</a>`;
-		const streamHtml = `<div class="stream-card" id="card-${numCallbackRuns}">
-													${previewLink}
-												</div>`;
-		streamBlock.insertAdjacentHTML('beforeend', streamHtml);
 		const currentStream = document.getElementById(`card-${numCallbackRuns}`)
-		const currentStreamLink = currentStream.querySelector('a');
-		currentStreamLink.addEventListener('click', (e) => {
-			e.preventDefault;
-			renderStreams(data.login, currentStream, currentStreamLink);
-		});
+		var player = new Twitch.Player(currentStream, options);
 	}
 
 	async function fetchStreamersJSON() {
@@ -112,7 +95,6 @@ window.addEventListener("load", function() {
 
 	fetchStreamersJSON().then(json => {
 		const streamers = json[category];
-		console.log(streamers)
 		if (streamers.length > 0) {
 			streamers.forEach( el => {
 				if (el.twitch) {
@@ -121,7 +103,7 @@ window.addEventListener("load", function() {
 			});
 			setTimeout(() => {
 				eachStreams()
-			}, 1500);
+			}, 1000);
 		}
 	});
 
@@ -133,13 +115,14 @@ window.addEventListener("load", function() {
 	}
 
 	function eachStreams() {
-		const currentStreams = channels.splice(0, 4);
-		currentStreams.forEach(el => {
-			renderCards(el)
-		});
-		if (!channels.length) {
-			btn && btn.classList.add('d-none');
-		}
+		console.log(channels)
+		// const currentStreams = channels.splice(0, 4);
+		// currentStreams.forEach(el => {
+		// 	renderStreams(el)
+		// });
+		// if (!channels.length) {
+		// 	btn && btn.classList.add('d-none');
+		// }
 	}
 
 })
