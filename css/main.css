@@ -5342,6 +5342,170 @@ h3 {
           transform: translateY(-50%) scaleX(-1);
 }
 
+.streams-preloader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 15.5rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 14;
+  background-color: hsla(0deg, 0%, 0%, 0.5);
+  border-radius: 7px;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+@media (max-width: 1161.98px) {
+  .streams-preloader {
+    top: 15rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .streams-preloader {
+    top: 14rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .streams-preloader {
+    top: 12.5rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .streams-preloader {
+    left: 0.5rem;
+    right: 0.5rem;
+    padding: 2rem 0;
+    top: 8.5rem;
+  }
+}
+.streams-preloader ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.streams-preloader ul li {
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-animation: grow 1.6s ease-in-out infinite;
+          animation: grow 1.6s ease-in-out infinite;
+}
+@media (max-width: 575.98px) {
+  .streams-preloader ul li {
+    width: 24px;
+    height: 24px;
+  }
+}
+.streams-preloader ul li:nth-child(1) {
+  -webkit-animation-delay: -1.4s;
+          animation-delay: -1.4s;
+  background: hsl(44deg, 64%, 53%);
+  -webkit-box-shadow: 0 0 50px hsl(44deg, 64%, 53%);
+          box-shadow: 0 0 50px hsl(44deg, 64%, 53%);
+}
+.streams-preloader ul li:nth-child(2) {
+  -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+  background: hsl(44deg, 64%, 62%);
+  -webkit-box-shadow: 0 0 50px hsl(44deg, 64%, 62%);
+          box-shadow: 0 0 50px hsl(44deg, 64%, 62%);
+}
+.streams-preloader ul li:nth-child(3) {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  background: hsl(44deg, 74%, 67%);
+  -webkit-box-shadow: 0 0 50px hsl(44deg, 74%, 67%);
+          box-shadow: 0 0 50px hsl(44deg, 74%, 67%);
+}
+.streams-preloader ul li:nth-child(4) {
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+  background: hsl(44deg, 84%, 74%);
+  -webkit-box-shadow: 0 0 50px hsl(44deg, 84%, 74%);
+          box-shadow: 0 0 50px hsl(44deg, 84%, 74%);
+}
+.streams-preloader ul li:nth-child(5) {
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+  background: hsl(44deg, 88%, 79%);
+  -webkit-box-shadow: 0 0 50px hsl(44deg, 88%, 79%);
+          box-shadow: 0 0 50px hsl(44deg, 88%, 79%);
+}
+.streams-preloader ul li:nth-child(6) {
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+  background: #f57300;
+  -webkit-box-shadow: 0 0 50px #f57300;
+          box-shadow: 0 0 50px #f57300;
+}
+.streams-preloader ul li:nth-child(7) {
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+  background: #673ab7;
+  -webkit-box-shadow: 0 0 50px #673ab7;
+          box-shadow: 0 0 50px #673ab7;
+}
+
+@-webkit-keyframes grow {
+  0%, 40%, 100% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0%, 40%, 100% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  20% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@media (max-width: 575.98px) {
+  @-webkit-keyframes grow {
+    0%, 40%, 100% {
+      -webkit-transform: scale(0.4);
+              transform: scale(0.4);
+    }
+    20% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+  }
+  @keyframes grow {
+    0%, 40%, 100% {
+      -webkit-transform: scale(0.4);
+              transform: scale(0.4);
+    }
+    20% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+  }
+}
+.o-none {
+  opacity: 0;
+}
+
 .cap-container {
   position: absolute;
   left: 0;
@@ -5479,6 +5643,11 @@ h3 {
     max-width: 49%;
     min-width: 49%;
   }
+}
+
+.watch-none {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .tower__image {

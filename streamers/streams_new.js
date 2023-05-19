@@ -114,6 +114,8 @@ window.addEventListener("load", function() {
 	}
 
 	const btn = document.querySelector('.-js-more-streams');
+	const preloader = document.querySelector('.-js-preloader');
+	const watchStreams = document.querySelector('.-js-watch-streams');
 
 	fetchStreamersJSON().then(json => {
 		const streamers = json[category];
@@ -125,7 +127,23 @@ window.addEventListener("load", function() {
 			});
 			setTimeout(() => {
 				eachStreams()
-			}, 2500);
+				if (streamers.length > 4) {
+					btn && btn.classList.remove('d-none');
+				}
+				if (watchStreams) {
+					const watchNone = document.querySelector('.-js-watch-none');
+					if (streamers.length === 0) {
+						watchStreams.classList.add('d-none');
+						watchNone.classList.remove('d-none');
+					}
+				}
+				if (preloader) {
+					preloader.classList.add('o-none');
+					setTimeout(() => {
+						preloader.classList.add('d-none');
+					}, 3000);
+				}
+			}, 3000);
 		}
 	});
 

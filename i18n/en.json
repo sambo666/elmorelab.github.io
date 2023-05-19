@@ -48,7 +48,8 @@
 		"showmore": "Show more",
 		"currently": "is currently",
 		"offline": "offline",
-		"loading": "loading"
+		"loading": "loading",
+		"none": "streams offline"
 	},
 	"download": {
 		"client": "Prepared C5 Client",
