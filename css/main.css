@@ -3924,6 +3924,9 @@ h3 {
   top: calc(35% + 90px);
   left: 0;
   z-index: 999;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 @media (max-width: 991.98px) {
   .hero__controls {
