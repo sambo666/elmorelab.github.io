@@ -154,7 +154,7 @@ window.addEventListener("load", function() {
 		const streamers = json[category];
 		if (streamers.length > 0) {
 			streamers.forEach( el => {
-				console.log(el)
+				//console.log(el)
 				if (el.twitch) {
 					getTwitchStreams(el.twitch);
 				} 
