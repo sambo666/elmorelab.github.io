@@ -3471,8 +3471,8 @@ h3 {
 }
 @media (max-width: 389.98px) {
   .hero__image {
-    background-position: calc(50% - 50px) 0;
-    background-size: 600px;
+    background-position: calc(50% - 35px) 0;
+    background-size: 520px;
   }
 }
 .hero-sub .clouds-image {
