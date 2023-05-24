@@ -6733,7 +6733,7 @@ p.info-list__item {
 /* Donations */
 .donations {
   position: relative;
-  z-index: 3;
+  z-index: 10;
   margin-top: -1rem;
 }
 @media (max-width: 767.98px) {
