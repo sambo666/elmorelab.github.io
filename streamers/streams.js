@@ -1,4 +1,8 @@
+require('_youtube_api.js');
+
 window.addEventListener("load", function() {
+
+	
 
 	const STREAMERS_PATH = 'https://sambo666.github.io/elmorelab.github.io/streamers/streamers.json?v=123';
 	//const STREAMERS_PATH = '../streamers/streamers.json?v=123';
@@ -6,7 +10,7 @@ window.addEventListener("load", function() {
 	let clinetId = "eqeootvs7wxgswfm46vud0cu7tcreo";
 	let clinetSecret = "0jiyngk8dxxok0olzilcu5pgepfqc4";
 
-	//let youtubekey = 'AIzaSyBTJzjOBu60nHncD0QDcO-TsBXja8967rI';
+	
 
 	let numCallbackRuns = 0;
 	let links = [];
@@ -14,6 +18,23 @@ window.addEventListener("load", function() {
 	const streamBlock = document.getElementById('-js-streams-list');
 	if (!streamBlock) return;
 	const category = streamBlock.dataset.stream;
+
+	function getYoutubeStreams(name)
+	{
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.open( "GET", "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId="+name+"&type=video&eventType=live&key="+youtubekey, false ); // false for synchronous request
+		xmlHttp.send( null );
+		let resp = JSON.parse(xmlHttp.responseText);
+		if(resp.items) {
+			if(resp.items.length > 0) {
+				if(resp.items[0].id) {
+					var videoId = resp.items[0].id.videoId;
+					let link = "https://www.youtube.com/embed/" + videoId;
+					renderStreams(link);
+				}
+			}
+		}
+	}
 
 	function getTwitchAuthorization() {
 		let url = `https://id.twitch.tv/oauth2/token?client_id=${clinetId}&darkpopout&client_secret=${clinetSecret}&grant_type=client_credentials`;
@@ -88,7 +109,6 @@ window.addEventListener("load", function() {
 		return streamers;
 	}
 
-	
 	const btn = document.querySelector('.-js-more-streams');
 
 	fetchStreamersJSON().then(json => {
@@ -122,5 +142,9 @@ window.addEventListener("load", function() {
 			btn && btn.classList.add('d-none');
 		}
 	}
+
+	// else if (element.youtube) {
+	// 	getYoutubeStreams(element.youtube);
+	// }
 
 })

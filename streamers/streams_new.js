@@ -1,11 +1,37 @@
 window.addEventListener("load", function() {
+
+
+	//const YOUTUBE_KEY = 'AIzaSyBTJzjOBu60nHncD0QDcO-TsBXja8967rI';
+	const YOUTUBE_KEY2 = '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';
+
+	// function getYoutubeStreams(name)
+	// {
+	// 	var xmlHttp = new XMLHttpRequest();
+	// 	xmlHttp.open( "GET", "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId="+name+"&type=video&eventType=live&key="+YOUTUBE_KEY, false ); // false for synchronous request
+	// 	xmlHttp.send( null );
+	// 	let resp = JSON.parse(xmlHttp.responseText);
+	// 	if(resp.items) {
+	// 		if(resp.items.length > 0) {
+	// 			if(resp.items[0].id) {
+	// 				var videoId = resp.items[0].id.videoId;
+	// 				let link = "https://www.youtube.com/embed/" + videoId;
+	// 				channels.push({
+	// 					'link': link,
+	// 					'preview': resp.items[0].snippet.thumbnails.high.url,
+	// 					'platform': 'youtube'
+	// 				});
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+	// getYoutubeStreams('BoHpts')
+
 	const STREAMERS_PATH = 'https://sambo666.github.io/elmorelab.github.io/streamers/streamers.json?v=123';
 	//const STREAMERS_PATH = '../streamers/streamers.json?v=123';
 
 	let clinetId = "eqeootvs7wxgswfm46vud0cu7tcreo";
 	let clinetSecret = "0jiyngk8dxxok0olzilcu5pgepfqc4";
-
-	//let youtubekey = 'AIzaSyBTJzjOBu60nHncD0QDcO-TsBXja8967rI';
 
 	let numCallbackRuns = 0;
 	let channels = [];
@@ -67,7 +93,8 @@ window.addEventListener("load", function() {
 						'link': link,
 						'login': data.data[0].user_login,
 						'preview': newStr,
-						'viewer_count': data.data[0].viewer_count
+						'viewer_count': data.data[0].viewer_count,
+						'platform': 'twitch'
 					});
 				}
 			}
@@ -90,11 +117,16 @@ window.addEventListener("load", function() {
 
 	function renderCards(data) {
 		numCallbackRuns++;
+		let views = '';
+		console.log(data.platform)
+		if (data.platform === 'twitch') {
+			views = `<span class="stream-viewer">${data.viewer_count}</span>`;
+		}
 		const previewLink = `<a class="stream-preview _ibg" href="javascript:void(0)">
-													<span class="stream-status">ONLINE</span>
-													<span class="stream-viewer">${data.viewer_count}</span>
-													<img src=${data.preview} />
-												</a>`;
+												<span class="stream-status">ONLINE</span>
+												${views}
+												<img src=${data.preview} />
+											</a>`;
 		const streamHtml = `<div class="stream-card" id="card-${numCallbackRuns}">
 													${previewLink}
 												</div>`;
@@ -116,14 +148,19 @@ window.addEventListener("load", function() {
 	const btn = document.querySelector('.-js-more-streams');
 	const preloader = document.querySelector('.-js-preloader');
 	const watchStreams = document.querySelector('.-js-watch-streams');
+	const wrapper = document.querySelector('.wrapper');
 
 	fetchStreamersJSON().then(json => {
 		const streamers = json[category];
 		if (streamers.length > 0) {
 			streamers.forEach( el => {
+				console.log(el)
 				if (el.twitch) {
-					getTwitchStreams(el.twitch)
-				}
+					getTwitchStreams(el.twitch);
+				} 
+				// else if (el.youtube) {
+				// 	getYoutubeStreams(el.youtube);
+				// }
 			});
 			setTimeout(() => {
 				eachStreams()
@@ -139,6 +176,7 @@ window.addEventListener("load", function() {
 				}
 				if (preloader) {
 					preloader.classList.add('o-none');
+					wrapper.classList.remove('-h100')
 					setTimeout(() => {
 						preloader.classList.add('d-none');
 					}, 3000);
