@@ -3140,6 +3140,11 @@ h3 {
 .-sub-pages .clouds-bottom {
   z-index: 9;
 }
+@media (min-width: 2440px) {
+  .-sub-pages .clouds-bottom {
+    margin-bottom: -12.5rem;
+  }
+}
 @media (max-width: 767.98px) {
   .-sub-pages .clouds-bottom {
     display: none;
