@@ -164,9 +164,6 @@ window.addEventListener("load", function() {
 			});
 			setTimeout(() => {
 				eachStreams()
-				if (streamers.length > 4) {
-					btn && btn.classList.remove('d-none');
-				}
 				if (watchStreams) {
 					const watchNone = document.querySelector('.-js-watch-none');
 					if (streamers.length === 0) {
@@ -179,7 +176,7 @@ window.addEventListener("load", function() {
 					wrapper.classList.remove('-h100')
 					setTimeout(() => {
 						preloader.classList.add('d-none');
-					}, 3000);
+					}, 1500);
 				}
 			}, 3000);
 		}
@@ -193,13 +190,18 @@ window.addEventListener("load", function() {
 	}
 
 	function eachStreams() {
+		console.log(channels)
 		const currentStreams = channels.splice(0, 4);
 		currentStreams.forEach(el => {
 			renderCards(el)
 		});
-		if (!channels.length) {
-			btn && btn.classList.add('d-none');
+
+		if (channels.length && channels.length > 0) {
+			btn && btn.classList.remove('d-none');
+		} else {
+			btn.classList.add('d-none');
 		}
+		
 	}
 
 })
