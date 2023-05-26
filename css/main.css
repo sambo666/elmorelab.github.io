@@ -114,7 +114,7 @@ body {
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
-  background-color: #1e1c1a;
+  background-color: #1d1b1a;
   font-weight: 400;
 }
 
@@ -6553,6 +6553,47 @@ h3 {
 
 ._webp .images {
   background-image: url("../images/dist/full-image-.webp");
+}
+
+.images-full {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 100%;
+}
+.images-full__dl {
+  background-image: url("../images/dist/bg-download.jpg");
+  height: 1871px;
+}
+.images-full__tr {
+  background-image: url("../images/dist/bg-tourneys.jpg");
+  height: 2356px;
+}
+.images-full::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(60%, rgba(26, 26, 24, 0.9)), to(#1a1a18));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(26, 26, 24, 0.9) 60%, #1a1a18 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(26, 26, 24, 0.9) 60%, #1a1a18 100%);
+  height: 15rem;
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .images-full {
+    display: none;
+  }
+}
+
+._webp .images-full__dl {
+  background-image: url("../images/dist/bg-download.jpg");
+}
+._webp .images-full__tr {
+  background-image: url("../images/dist/bg-tourneys.jpg");
 }
 
 /* Tourneys */
