@@ -3416,21 +3416,21 @@ h3 {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 61.875rem;
+  min-height: 52rem;
 }
 @media (max-width: 1161.98px) {
   .hero {
-    min-height: 60rem;
+    min-height: 52rem;
   }
 }
 @media (max-width: 991.98px) {
   .hero {
-    min-height: 40rem;
+    min-height: 36rem;
   }
 }
 @media (max-width: 767.98px) {
   .hero {
-    min-height: 34rem;
+    min-height: 32rem;
   }
 }
 @media (max-width: 575.98px) {
