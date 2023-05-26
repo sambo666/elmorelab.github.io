@@ -1874,6 +1874,11 @@ ol.counter li:before {
     display: none;
   }
 }
+@media (min-width: 1440px) {
+  .btn.btn-cabinet {
+    margin-right: 3.5rem;
+  }
+}
 .btn.btn-cabinet circle, .btn.btn-cabinet path {
   stroke: #fff;
   -webkit-transition: all 0.15s ease 0s;
@@ -1935,6 +1940,11 @@ ol.counter li:before {
 @media (max-width: 767.98px) {
   .progress-container {
     display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .progress-container {
+    margin-right: 2.5rem;
   }
 }
 
@@ -2409,6 +2419,11 @@ ol.counter li:before {
     display: none;
   }
 }
+@media (min-width: 1440px) {
+  .start-play {
+    margin-right: 2.5rem;
+  }
+}
 
 ._webp .start-play__link._ru {
   background-image: url("../images/dist/start-play-ru.webp");
@@ -2440,6 +2455,11 @@ ol.counter li:before {
 }
 .header-lang a:not(:last-child) {
   margin-right: 0.625rem;
+}
+@media (min-width: 1440px) {
+  .header-lang a:not(:last-child) {
+    margin-right: 1rem;
+  }
 }
 @media (any-hover: hover) {
   .header-lang a:hover {
@@ -5834,7 +5854,7 @@ h3 {
 .clouds-bottom {
   position: absolute;
   left: 0;
-  bottom: -11.5rem;
+  bottom: -15.5rem;
   width: 100%;
   height: 768px;
   background-repeat: no-repeat;
