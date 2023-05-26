@@ -114,7 +114,7 @@ body {
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
-  background-color: #1b1a18;
+  background-color: #1e1c1a;
   font-weight: 400;
 }
 
@@ -3510,8 +3510,8 @@ h3 {
 }
 @media (max-width: 389.98px) {
   .hero__image {
-    background-position: calc(50% - 30px) 0;
-    background-size: 510px;
+    background-position: calc(50% - 28px) 0;
+    background-size: 470px;
   }
 }
 .hero-sub .clouds-image {
