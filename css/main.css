@@ -3504,14 +3504,14 @@ h3 {
 }
 @media (max-width: 470px) {
   .hero__image {
-    background-size: 540px;
-    background-position: calc(50% - 35px) 0;
+    background-size: 510px;
+    background-position: calc(50% - 30px) 0;
   }
 }
 @media (max-width: 389.98px) {
   .hero__image {
-    background-position: calc(50% - 35px) 0;
-    background-size: 520px;
+    background-position: calc(50% - 30px) 0;
+    background-size: 510px;
   }
 }
 .hero-sub .clouds-image {
