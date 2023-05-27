@@ -3475,17 +3475,6 @@ h3 {
 .hero__image.main-image {
   background-image: url("../images/dist/hero-bg-main.webp");
 }
-@media (max-width: 1920px) {
-  .hero__image {
-    background-size: 1920px;
-  }
-}
-@media (max-width: 1440px) {
-  .hero__image {
-    background-size: 1440px;
-    background-position: center 0;
-  }
-}
 @media (max-width: 991.98px) {
   .hero__image {
     background-size: 1110px;
@@ -3519,7 +3508,7 @@ h3 {
 @media (min-width: 991.98px) {
   .hero__image {
     height: 100%;
-    background-size: cover;
+    background-size: 100%;
     background-position: center top;
   }
 }
@@ -3684,10 +3673,6 @@ h3 {
   .hero-sub .clouds__image {
     background-position: center 300px;
   }
-}
-
-.hero.hero-sub.-visible-after::after {
-  display: block;
 }
 
 ._webp .hero.hero-sub .clouds__image {
@@ -6555,37 +6540,30 @@ h3 {
   background-image: url("../images/dist/full-image-.webp");
 }
 
-.images-full {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
+.main-tr {
+  background-image: url("../images/dist/bg-tourneys.jpg");
+}
+
+.main-dl {
+  background-image: url("../images/dist/bg-download.jpg");
+}
+
+.main-st {
+  background-image: url("../images/dist/bg-streams.jpg");
+}
+
+.main-dn {
+  background-image: url("../images/dist/bg-donation.jpg");
+}
+
+.-main-bg {
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: 100%;
 }
-.images-full__dl {
-  background-image: url("../images/dist/bg-download.jpg");
-  height: 1871px;
-}
-.images-full__tr {
-  background-image: url("../images/dist/bg-tourneys.jpg");
-  height: 2356px;
-}
-.images-full::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(60%, rgba(26, 26, 24, 0.9)), to(#1a1a18));
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(26, 26, 24, 0.9) 60%, #1a1a18 100%);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(26, 26, 24, 0.9) 60%, #1a1a18 100%);
-  height: 15rem;
-  display: none;
-}
 @media (max-width: 767.98px) {
-  .images-full {
-    display: none;
+  .-main-bg {
+    background-image: none;
   }
 }
 
@@ -6594,6 +6572,12 @@ h3 {
 }
 ._webp .images-full__tr {
   background-image: url("../images/dist/bg-tourneys.jpg");
+}
+._webp .images-full__st {
+  background-image: url("../images/dist/bg-streams.jpg");
+}
+._webp .images-full__dn {
+  background-image: url("../images/dist/bg-donation.jpg");
 }
 
 /* Tourneys */
@@ -6905,6 +6889,9 @@ p.info-list__item {
   .-sub-pages .hero-image-container {
     display: none;
   }
+}
+.-sub-pages .section-tower::after {
+  display: none;
 }
 
 .-streams.wrapper {
