@@ -3566,7 +3566,7 @@ h3 {
 }
 @media (max-width: 575.98px) {
   .hero-sub .start__text {
-    top: 1px;
+    top: 2px;
     font-size: 1.5625rem;
   }
 }
@@ -3579,8 +3579,8 @@ h3 {
 }
 @media (max-width: 575.98px) {
   .hero-sub .start {
-    width: 250px;
-    height: 53px;
+    width: 300px;
+    height: 63px;
   }
 }
 .hero-sub .hero__middle {
@@ -3986,7 +3986,7 @@ h3 {
 .online__online-title {
   position: relative;
   top: -3px;
-  font-size: 1.5625rem;
+  font-size: 1.5rem;
 }
 @media (max-width: 575.98px) {
   .online__online-title {
