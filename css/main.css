@@ -117,6 +117,11 @@ body {
   background-color: #1d1b1a;
   font-weight: 400;
 }
+@media (max-width: 767.98px) {
+  body {
+    background-color: #111111;
+  }
+}
 
 /*<ОБОЛОЧКА>-------------------------------------------------------------------------------- */
 .wrapper {
@@ -2705,6 +2710,9 @@ footer.footer {
   position: absolute;
   bottom: -0.5rem;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 26px;
   height: 26px;
   display: -webkit-box;
@@ -3084,6 +3092,10 @@ footer.footer {
 
 body {
   overflow-y: scroll;
+}
+
+.main.main-index {
+  background-color: #1e1c1a;
 }
 
 body._lock {
@@ -3472,9 +3484,6 @@ h3 {
   background-position: center 0;
   background-size: cover;
 }
-.hero__image.main-image {
-  background-image: url("../images/dist/hero-bg-main.webp");
-}
 @media (max-width: 991.98px) {
   .hero__image {
     background-size: 1110px;
@@ -3483,6 +3492,7 @@ h3 {
 }
 @media (max-width: 767.98px) {
   .hero__image {
+    background-color: #1e1c1a;
     background-size: 1100px;
   }
 }
@@ -6503,43 +6513,6 @@ h3 {
   }
 }
 
-.images {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background-image: url("../images/dist/full-image-.webp");
-  background-repeat: no-repeat;
-  background-position: center 0;
-  background-size: cover;
-  display: none;
-  max-height: 1198px;
-}
-.images::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), color-stop(50%, rgba(26, 26, 24, 0.8)), to(#1a1a18));
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(26, 26, 24, 0.8) 50%, #1a1a18 100%);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(26, 26, 24, 0.8) 50%, #1a1a18 100%);
-  height: 12.5rem;
-}
-@media (max-width: 767.98px) {
-  .images {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-._webp .images {
-  background-image: url("../images/dist/full-image-.webp");
-}
-
 .main-tr {
   background-image: url("../images/dist/bg-tourneys.jpg");
 }
@@ -6563,7 +6536,7 @@ h3 {
 }
 @media (max-width: 767.98px) {
   .-main-bg {
-    background-image: none;
+    background-image: url("../images/dist/full-image-.jpg");
   }
 }
 
@@ -6578,6 +6551,11 @@ h3 {
 }
 ._webp .images-full__dn {
   background-image: url("../images/dist/bg-donation.jpg");
+}
+@media (max-width: 767.98px) {
+  ._webp .images-full {
+    background-image: url("../images/dist/full-image-.jpg");
+  }
 }
 
 /* Tourneys */
