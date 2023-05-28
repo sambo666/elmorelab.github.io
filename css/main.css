@@ -3505,14 +3505,14 @@ h3 {
 }
 @media (max-width: 470px) {
   .hero__image {
-    background-size: 510px;
-    background-position: calc(50% - 28px) 0;
+    background-size: 512px;
+    background-position: calc(50% - 29px) 0;
   }
 }
 @media (max-width: 389.98px) {
   .hero__image {
     background-position: calc(50% - 27px) 0;
-    background-size: 470px;
+    background-size: 472px;
   }
 }
 @media (min-width: 991.98px) {
