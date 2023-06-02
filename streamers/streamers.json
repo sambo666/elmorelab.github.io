@@ -1,111 +1,271 @@
 {
+	"random": "on",
 	"featured": [
 		{
-			"twitch": "w0n23"
+			"twitch": "drambudew"
 		}
 	],
 	"streamers" : [
 		{
-			"twitch": "dmitry_bale"
+			"twitch": "dimasheff"
 		},
 		{
-			"twitch": "nooneboss"
+		"twitch": "niklausla2"
 		},
 		{
-			"twitch": "dreadztv"
+			"twitch": "drambudew"
 		},
 		{
-			"twitch": "c_a_k_e"
+			"twitch": "papateresa"
 		},
 		{
-			"twitch": "ramzes"
+			"twitch": "formjeds174"
 		},
 		{
-			"twitch": "bratiki94"
+			"twitch": "ruudoneqt"
 		},
 		{
-			"twitch": "dota2ez25"
+			"twitch": "oco3hahue"
 		},
 		{
-			"twitch": "w0n23"
+			"twitch": "boochaz"
 		},
 		{
-			"twitch": "Xop0"
+			"twitch": "cowpower"
 		},
 		{
-			"twitch": "tarik"
+			"twitch": "dongavan"
 		},
 		{
-			"twitch": "midbeast"
+			"twitch": "qqdetki"
 		},
 		{
-			"twitch": "Cellbit"
+			"twitch": "minus__kabinet"
 		},
 		{
-			"twitch": "iltw1"
+			"twitch": "garrik243"
 		},
 		{
-			"twitch": "VALORANT"
+			"twitch": "karnissadc"
 		},
 		{
-			"twitch": "ESL_CSGO"
+			"twitch": "imorda"
 		},
 		{
-			"twitch": "xop0"
+			"twitch": "yarosha1990"
 		},
 		{
-			"twitch": "gospojaaaa"
+			"twitch": "artem_sergeevi4"
 		},
 		{
-			"twitch": "dmitry_bale"
+			"twitch": "pwnziipumor"
 		},
 		{
-			"twitch": "nooneboss"
+			"twitch": "darrrka"
 		},
 		{
-			"twitch": "dreadztv"
+			"twitch": "papa_teresa"
 		},
 		{
-			"twitch": "c_a_k_e"
+			"twitch": "holy_shurik"
 		},
 		{
-			"twitch": "ramzes"
+			"twitch": "reoxidtv"
 		},
 		{
-			"twitch": "bratiki94"
+			"twitch": "testsqwen"
 		},
 		{
-			"twitch": "dota2ez25"
+			"twitch": "johny_stormy"
 		},
 		{
-			"twitch": "w0n23"
+			"twitch": "ms_H0LY"
 		},
 		{
-			"twitch": "Xop0"
+			"twitch": "P1bitOrlz"
 		},
 		{
-			"twitch": "tarik"
+			"twitch": "stream_suite"
 		},
 		{
-			"twitch": "midbeast"
+			"twitch": "guka4"
 		},
 		{
-			"twitch": "Cellbit"
+			"twitch": "1_increation"
 		},
 		{
-			"twitch": "iltw1"
+			"twitch": "karragaming"
 		},
 		{
-			"twitch": "VALORANT"
+			"twitch": "kaymirat"
 		},
 		{
-			"twitch": "ESL_CSGO"
+			"twitch": "johnyteibow"
 		},
 		{
-			"twitch": "xop0"
+			"twitch": "maxxcactus"
 		},
 		{
-			"twitch": "gospojaaaa"
+			"twitch": "megan1337"
+		},
+		{
+			"twitch": "coffee_gj"
+		},
+		{
+			"twitch": "winraruk"
+		},
+		{
+			"twitch": "2_increation"
+		},
+		{
+			"twitch": "xxxfattony"
+		},
+		{
+			"twitch": "badden59"
+		},
+		{
+			"twitch": "zullxstation"
+		},
+		{
+			"twitch": "umaras"
+		},
+		{
+			"twitch": "hardwaytommr"
+		},
+		{
+			"twitch": "la_muca"
+		},
+		{
+			"twitch": "criminalzzzzz"
+		},
+		{
+			"twitch": "tvlons"
+		},
+		{
+			"twitch": "xsuly"
+		},
+		{
+			"twitch": "sagirix1"
+		},
+		{
+			"twitch": "felkayoutube"
+		},
+		{
+			"twitch": "usolco"
+		},
+		{
+			"twitch": "iviciado"
+		},
+		{
+			"twitch": "holyms2"
+		},
+		{
+			"twitch": "crespro90"
+		},
+		{
+			"twitch": "strolle1997"
+		},
+		{
+			"twitch": "xdarxyde"
+		},
+		{
+			"twitch": "hdlavitz"
+		},
+		{
+			"twitch": "cuttyl2"
+		},
+		{
+			"twitch": "1TopZera"
+		},
+		{
+			"twitch": "lit4iff"
+		},
+		{
+			"twitch": "dellyweed"
+		},
+		{
+			"twitch": "gamesgunit"
+		},
+		{
+			"twitch": "repisss"
+		},
+		{
+			"twitch": "wiarat"
+		},
+		{
+			"twitch": "cuttyl2"
+		},
+		{
+			"twitch": "Leetch"
+		},
+		{
+			"twitch": "questmonster_l2"
+		},
+		{
+			"twitch": "usurinisbebras"
+		},
+		{
+			"twitch": "flooyd_og"
+		},
+		{
+			"twitch": "the_mega_tv"
+		},
+		{
+			"twitch": "siaubastw"
+		},
+		{
+			"twitch": "whitetitanz"
+		},
+		{
+			"twitch": "justplay_justrelax"
+		},
+		{
+			"twitch": "nematictv"
+		},
+		{
+			"twitch": "aludarg"
+		},
+		{
+			"twitch": "veyshellmanifesto"
+		},
+		{
+			"twitch": "kaymirat_1"
+		},
+		{
+			"twitch": "curinguetzrpg"
+
+		},
+		{
+			"twitch": "italianpr0_"
+
+		},
+		{
+			"twitch": "farwmak"
+		},
+		{
+			"twitch": "GallagerTv"
+
+		},
+		{
+			"twitch": "heavy_gif"
+
+		},
+		{
+			"twitch": "aerodecco"
+
+		},
+		{
+			"twitch": "ainkottv"
+
+		},
+		{
+			"twitch": "chacu"
+
+		},
+		{
+			"twitch": "orzeltcz"
+
 		}
+
 	]
 }

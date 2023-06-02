@@ -27,8 +27,8 @@ window.addEventListener("load", function() {
 
 	// getYoutubeStreams('BoHpts')
 
-	const STREAMERS_PATH = 'https://sambo666.github.io/elmorelab.github.io/streamers/streamers.json?v=123';
-	//const STREAMERS_PATH = '../streamers/streamers.json?v=123';
+	//const STREAMERS_PATH = 'https://sambo666.github.io/elmorelab.github.io/streamers/streamers.json?v=123';
+	const STREAMERS_PATH = '../streamers/streamers.json?v=123';
 
 	let clinetId = "eqeootvs7wxgswfm46vud0cu7tcreo";
 	let clinetSecret = "0jiyngk8dxxok0olzilcu5pgepfqc4";
@@ -52,7 +52,7 @@ window.addEventListener("load", function() {
 		});
 	}
 
-	async function getTwitchStreams(name) {
+	async function getTwitchStreams(name, random) {
 		const endpoint = `https://api.twitch.tv/helix/streams/?user_login=${name}`;
 
 		let authorizationObject = await getTwitchAuthorization();
@@ -70,17 +70,22 @@ window.addEventListener("load", function() {
 			"Client-Id": clinetId,
 		};
 
+		const setOff = () => {
+			const capOffline = document.querySelector('.-js-cap-offline');
+			const capLoading = document.querySelector('.-js-cap-loading');
+			capOffline.classList.remove('d-none');
+			capLoading.classList.add('d-none');
+		}
+
 		fetch(endpoint, {
 			headers,
 		})
 		.then((res) => res.json())
 		.then((data) => {
 			if (category === 'featured' && data.data?.length === 0) {
-				const capOffline = document.querySelector('.-js-cap-offline');
-				const capLoading = document.querySelector('.-js-cap-loading');
-				capOffline.classList.remove('d-none');
-				capLoading.classList.add('d-none');
+				setOff();
 			}
+
 			if (data.data?.length > 0) {
 				const thumbStr = data.data[0].thumbnail_url;
 				const reW = /{width}/gi;
@@ -118,7 +123,7 @@ window.addEventListener("load", function() {
 	function renderCards(data) {
 		numCallbackRuns++;
 		let views = '';
-		console.log(data.platform)
+		//console.log(data.platform)
 		if (data.platform === 'twitch') {
 			views = `<span class="stream-viewer">${data.viewer_count}</span>`;
 		}
@@ -151,21 +156,26 @@ window.addEventListener("load", function() {
 	const wrapper = document.querySelector('.wrapper');
 
 	fetchStreamersJSON().then(json => {
-		const streamers = json[category];
+		let random = json['random'];
+		let streamers = json[category];
+		if (random === 'on') {
+			streamers = json['streamers'];
+		}
 		if (streamers.length > 0) {
 			streamers.forEach( el => {
 				//console.log(el)
 				if (el.twitch) {
-					getTwitchStreams(el.twitch);
-				} 
+					getTwitchStreams(el.twitch, random);
+				}
 				// else if (el.youtube) {
 				// 	getYoutubeStreams(el.youtube);
 				// }
 			});
 			setTimeout(() => {
-				eachStreams()
+				eachStreams(channels, random);
 				if (watchStreams) {
 					const watchNone = document.querySelector('.-js-watch-none');
+					console.log(channels.length)
 					if (streamers.length === 0) {
 						watchStreams.classList.add('d-none');
 						watchNone.classList.remove('d-none');
@@ -189,8 +199,12 @@ window.addEventListener("load", function() {
 		})
 	}
 
-	function eachStreams() {
-		console.log(channels)
+	function eachStreams(channels, random) {
+		if (random === 'on' && channels.length > 0) {
+			const item = channels[Math.floor(Math.random()*channels.length)];
+			renderCards(item);
+			return
+		}
 		const currentStreams = channels.splice(0, 4);
 		currentStreams.forEach(el => {
 			renderCards(el)
@@ -199,7 +213,7 @@ window.addEventListener("load", function() {
 		if (channels.length && channels.length > 0) {
 			btn && btn.classList.remove('d-none');
 		} else {
-			btn.classList.add('d-none');
+			btn && btn.classList.add('d-none');
 		}
 		
 	}
