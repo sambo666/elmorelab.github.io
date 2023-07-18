@@ -74,5 +74,17 @@
 		"subtitle": "This is a place that keeps the memory of the great heroes who won honor and glory in tournaments"
 	},
 	"allsponsors": "Elmorelab All Sponsors",
-	"showmore": "Show more"
+	"showmore": "Show more",
+  "timeline": {
+    "title": "Server Timeline",
+    "subtitle": "History of Significant Events",
+    "t1": "Launch 1",
+    "t2": "Launch 2",
+    "t3": "Launch 3",
+    "t4": "Launch 4",
+    "t5": "Launch 5",
+    "t6": "Launch 6",
+    "t7": "Launch 7",
+    "t8": "Launch 8"
+  }
 }

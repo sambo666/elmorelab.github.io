@@ -7774,6 +7774,7 @@ p.info-list__item {
 .event-title {
   position: relative;
   padding: 0 1rem;
+  width: 100%;
   z-index: 1;
   font-size: 0.875rem;
   text-transform: uppercase;
