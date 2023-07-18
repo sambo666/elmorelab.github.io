@@ -35,6 +35,7 @@ window.addEventListener("load", function() {
 
 	let numCallbackRuns = 0;
 	let channels = [];
+	let promisesArray = [];
 
 	const streamBlock = document.getElementById('-js-streams-list');
 	if (!streamBlock) return;
@@ -52,7 +53,7 @@ window.addEventListener("load", function() {
 		});
 	}
 
-	async function getTwitchStreams(name, random) {
+	async function getTwitchStreams(name, random, repeat) {
 		const endpoint = `https://api.twitch.tv/helix/streams/?user_login=${name}`;
 
 		let authorizationObject = await getTwitchAuthorization();
@@ -70,11 +71,18 @@ window.addEventListener("load", function() {
 			"Client-Id": clinetId,
 		};
 
+		const watchStreams = document.querySelector('.-js-watch-streams');
+
 		const setOff = () => {
 			const capOffline = document.querySelector('.-js-cap-offline');
 			const capLoading = document.querySelector('.-js-cap-loading');
 			capOffline.classList.remove('d-none');
 			capLoading.classList.add('d-none');
+			// if (watchStreams) {
+			// 	const watchNone = document.querySelector('.-js-watch-none');
+			// 	watchStreams.classList.add('d-none');
+			// 	watchNone.classList.remove('d-none');
+			// }
 		}
 
 		fetch(endpoint, {
@@ -82,10 +90,12 @@ window.addEventListener("load", function() {
 		})
 		.then((res) => res.json())
 		.then((data) => {
-			if (category === 'featured' && data.data?.length === 0) {
-				setOff();
-			}
-
+			//kostil
+			setTimeout(() => {
+				if (category === 'featured' && data.data?.length === 0 && random === 'on' && repeat) {
+					setOff();
+				}
+			}, 3000);
 			if (data.data?.length > 0) {
 				const thumbStr = data.data[0].thumbnail_url;
 				const reW = /{width}/gi;
@@ -152,70 +162,80 @@ window.addEventListener("load", function() {
 
 	const btn = document.querySelector('.-js-more-streams');
 	const preloader = document.querySelector('.-js-preloader');
-	const watchStreams = document.querySelector('.-js-watch-streams');
 	const wrapper = document.querySelector('.wrapper');
+
+	let jsonObj;
 
 	fetchStreamersJSON().then(json => {
 		let random = json['random'];
-		let streamers = json[category];
-		if (random === 'on') {
-			streamers = json['streamers'];
-		}
-		if (streamers.length > 0) {
-			streamers.forEach( el => {
-				//console.log(el)
-				if (el.twitch) {
-					getTwitchStreams(el.twitch, random);
-				}
-				// else if (el.youtube) {
-				// 	getYoutubeStreams(el.youtube);
-				// }
-			});
-			setTimeout(() => {
-				eachStreams(channels, random);
-				if (watchStreams) {
-					const watchNone = document.querySelector('.-js-watch-none');
-					console.log(channels.length)
-					if (streamers.length === 0) {
-						watchStreams.classList.add('d-none');
-						watchNone.classList.remove('d-none');
-					}
-				}
-				if (preloader) {
-					preloader.classList.add('o-none');
-					wrapper.classList.remove('-h100')
-					setTimeout(() => {
-						preloader.classList.add('d-none');
-					}, 1500);
-				}
-			}, 3000);
-		}
+		let allStreamers = [...json['featured'], ...json['streamers']];
+		//console.log(allStreamers)
+		jsonObj = json;
+		getSetStreams(random, allStreamers);
 	});
+
+	function getSetStreams(random, streamers, repeat = false) {
+		if (streamers.length > 0) {
+			if (category === 'featured' && random === 'off') {
+				const featuredStream = streamers[0].twitch;
+				getTwitchStreams(featuredStream, random, repeat);
+			}
+			if (streamers === 'streamers' && random === 'on' || category === 'streamers') {
+				jsonObj['streamers'].forEach( el => {
+					if (el.twitch) {
+						getTwitchStreams(el.twitch, random, repeat);
+					}
+				});
+			}
+
+		}
+
+		setTimeout(() => {
+			eachStreams(channels, random);
+			if (preloader) {
+				preloader.classList.add('o-none');
+				wrapper.classList.remove('-h100')
+				setTimeout(() => {
+					preloader.classList.add('d-none');
+				}, 1500);
+			}
+		}, 3000);
+	}
 
 	if (btn) {
 		btn.addEventListener('click', (e) => {
 			e.preventDefault();
-			eachStreams()
+			eachStreams(channels);
 		})
 	}
 
+	const setOn = () => {
+		const capOffline = document.querySelector('.-js-cap-offline');
+		const capLoading = document.querySelector('.-js-cap-loading');
+		capOffline.classList.add('d-none');
+		capLoading.classList.remove('d-none');
+	}
+
 	function eachStreams(channels, random) {
-		if (random === 'on' && channels.length > 0) {
+		if (random === 'on' && category === 'featured' && channels.length > 0) {
 			const item = channels[Math.floor(Math.random()*channels.length)];
 			renderCards(item);
-			return
+			return;
 		}
+		if (random === 'off' && category === 'featured' && !channels[0]?.login) {
+			getSetStreams('on', 'streamers', repeat = true);
+			return;
+		}
+
 		const currentStreams = channels.splice(0, 4);
-		currentStreams.forEach(el => {
-			renderCards(el)
-		});
+		currentStreams.forEach(el => renderCards(el));
 
 		if (channels.length && channels.length > 0) {
 			btn && btn.classList.remove('d-none');
 		} else {
 			btn && btn.classList.add('d-none');
 		}
-		
+
 	}
 
 })

@@ -10,10 +10,11 @@
 	"menu": {
 		"home": "Главная",
 		"download": "Скачать",
-		"donation": "Донат",
+		"donation": "Пожертвования",
 		"forum": "Форум",
 		"tourneys": "Турниры",
-		"account": "Личный кабинет"
+		"account": "Личный кабинет",
+		"profile": "Профиль"
 	},
 	"header": {
 		"support": "поддержка сервера",

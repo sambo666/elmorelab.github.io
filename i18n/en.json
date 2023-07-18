@@ -13,7 +13,8 @@
 		"donation": "Donation",
 		"forum": "Forum",
 		"tourneys": "Tourneys",
-		"account": "Account Settings"
+		"account": "Account Settings",
+		"profile": "Profile"
 	},
 	"header": {
 		"support": "server support",

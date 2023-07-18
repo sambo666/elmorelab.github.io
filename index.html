@@ -122,15 +122,16 @@
 							<circle cx="13.5" cy="6.25" r="5.25" stroke-width="2"/>
 							<path d="M1 20.9151C11.9091 7.73326 22.2121 15.4227 26 20.9151" stroke-width="2"/>
 						</svg>
+						<span class="btn-cabinet__link">PROFILE</span>
 					</a>
 					<div class="progress-container">
 						<div class="progress-support__link">
 							<div class="btn-gold">
-								<span class="progress-support__link-text">99%</span>
+								<span class="progress-support__link-text -donation-progress">99%</span>
 								<span class="progress-length">
 									<span style="width: 90%">
 									</span>
-									<span style="width:calc(90% + 1px)">
+									<span class="-donation-progress-fill" style="width:calc(90% + 1px)">
 									</span>
 								</span>
 								<span class="progress-length__glowing" style="width:90%"></span>
@@ -207,10 +208,12 @@
 			<!-- hero__middle-servers -->
 			<div class="hero__middle-servers">
 				<a class="server -js-tip tip-server -server-teon" href="#tip-server">
-					<span class="server__title">X3 Server TEON</span>
-					<span class="server__online">
-						<i class="_online"></i>
-						<span class="online__online-title -online-total">----</span>
+					<span class="server-row">
+						<span class="server__title">TEON x1 C2</span>
+						<span class="server__online">
+							<i class="_online"></i>
+							<span class="online__online-title -online-total">----</span>
+						</span>
 					</span>
 					<div class="-js-tip-window">
 						<div class="server-tip__row">
@@ -225,23 +228,18 @@
 							<span class="server__online">
 								<i class="_online"></i>
 								<span class="online__online-title -online-traders">---</span>
-							</span>
-						</div>
-						<div class="server-tip__row">
-							<span class="server__title" data-i18n="header.overallonline">overall online</span>
-							<span class="server__online">
-								<i class="_online"></i>
-								<span class="online__online-title -online-total">----</span>
 							</span>
 						</div>
 					</div>
 				</a>
 				<div class="line-sm"></div>
 				<a class="server -js-tip tip-server -server-bartz" href="#tip-server">
-					<span class="server__title">X1 Server BARTZ</span>
-					<span class="server__online">
-						<i class="_online"></i>
-						<span class="online__online-title -online-total">----</span>
+					<span class="server-row">
+						<span class="server__title">BARTZ x3 C5</span>
+						<span class="server__online">
+							<i class="_online"></i>
+							<span class="online__online-title -online-total">----</span>
+						</span>
 					</span>
 					<div class="-js-tip-window">
 						<div class="server-tip__row">
@@ -256,13 +254,6 @@
 							<span class="server__online">
 								<i class="_online"></i>
 								<span class="online__online-title -online-traders">---</span>
-							</span>
-						</div>
-						<div class="server-tip__row">
-							<span class="server__title" data-i18n="header.overallonline">overall online</span>
-							<span class="server__online">
-								<i class="_online"></i>
-								<span class="online__online-title -online-total">----</span>
 							</span>
 						</div>
 					</div>
@@ -492,7 +483,6 @@
 					</div>
 				</div>
 
-				
 			</div>
 		</div>
 	</section>
@@ -597,6 +587,85 @@
 			</div>
 		</div>
 
+    <div class="timeline _container">
+			<h2 class="section-title" data-i18n="timeline.title">Server Timeline</h2>
+      <h3 class="section-info-md" data-i18n="timeline.subtitle">History of significant events</h3>
+      <!-- one-lines || two-lines -->
+			<div class="swiper-timeline">
+        <div class="swiper-wrapper"></div>
+        
+        <div class="timeline__container two-lines">
+          <div class="timeline-row"></div>
+          <div class="timeline-row"></div>
+          
+          <!-- row -->
+          <div class="timeline-events__row row-1">
+            <div class="event-container swiper-slide">
+              <div class="event-frame">
+                <h4 class="event-title">Launch of New Lineage Server Global</h4>
+              </div>
+              <div class="event-status"></div>
+              <h5 class="gold-title">11/05/2024</h5>
+            </div>
+            <div class="event-container swiper-slide">
+              <div class="event-frame">
+                <h4 class="event-title">Festive Cheer and Gifts Galore</h4>
+              </div>
+              <div class="event-status"></div>
+              <h5 class="gold-title">11/05/2023</h5>
+            </div>
+            <div class="event-container special-event swiper-slide">
+              <div class="event-frame">
+                <h4 class="event-title">Bringing Players Together</h4>
+              </div>
+              <div class="event-status"></div>
+              <h5 class="gold-title">11/05/2021</h5>
+            </div>
+            <div class="event-container swiper-slide">
+              <div class="event-frame">
+                <h4 class="event-title">Fresh Content and Rewards</h4>
+              </div>
+              <div class="event-status"></div>
+              <h5 class="gold-title">11/05/2020</h5>
+            </div>
+          </div><!-- //row -->
+          <!-- row -->
+          <!-- event-1, event-2, event-3, event-4 -->
+          <div class="timeline-events__row row-2 event-4">
+            <div class="event-container swiper-slide">
+              <div class="event-frame">
+                <h4 class="event-title">Launch of New Lineage Server Global</h4>
+              </div>
+              <div class="event-status"></div>
+              <h5 class="gold-title">11/05/2016</h5>
+            </div>
+            <div class="event-container swiper-slide">
+              <div class="event-frame">
+                <h4 class="event-title">Launch of New Lineage Server Global</h4>
+              </div>
+              <div class="event-status"></div>
+              <h5 class="gold-title">11/05/2017</h5>
+            </div>
+            <div class="event-container swiper-slide">
+              <div class="event-frame">
+                <h4 class="event-title">Launch of New Lineage Server Global</h4>
+              </div>
+              <div class="event-status"></div>
+              <h5 class="gold-title">11/05/2018</h5>
+            </div>
+            <div class="event-container swiper-slide">
+              <div class="event-frame">
+                <h4 class="event-title">Launch of New Lineage Server Global</h4>
+              </div>
+              <div class="event-status"></div>
+              <h5 class="gold-title">11/05/2019</h5>
+            </div>
+          </div><!-- //row -->
+ 
+        </div>
+      </div>
+    </div>
+
 		<!-- Footer -->
 		<footer class="footer section" id="footer">
 			<div class="footer__container _container">
@@ -624,6 +693,7 @@
 							<circle cx="13.5" cy="6.25" r="5.25" stroke-width="2"></circle>
 							<path d="M1 20.9151C11.9091 7.73326 22.2121 15.4227 26 20.9151" stroke-width="2"></path>
 						</svg>
+						<span class="btn-cabinet__link" data-i18n="menu.profile">Profile</span>
 					</a>
 					<a href="./download.html" class="start">
 						<span class="start__text" data-i18n="header.start" innerhtml="Start Play">Start Play</span>
